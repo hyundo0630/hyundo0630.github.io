@@ -68,7 +68,6 @@ expat을 가지고 XML 응용 프로그램을 개발하는데 필요한 Libary�
 ```
 # wget https://downloads.apache.org/apr/apr-1.7.0.tar.gz
 ```
-<br>
 <div style="font-size:16px;">
 <li>apr-util Download URL</li>
 </div>
@@ -76,7 +75,6 @@ expat을 가지고 XML 응용 프로그램을 개발하는데 필요한 Libary�
 ```
 # wget https://downloads.apache.org/apr/apr-util-1.6.1.tar.gz
 ```
-<br>
 <div style="font-size:16px;">
 <li> apache2 Download URL</li>
 </div>
@@ -84,7 +82,6 @@ expat을 가지고 XML 응용 프로그램을 개발하는데 필요한 Libary�
 ```
 # wget https://downloads.apache.org/httpd/httpd-2.4.5.1.tar.gz
 ```
-<br>
 
 <div style="font-size:16px;">
 &nbsp;pcre 는 **pcer.org** 에서 다운로드가 가능하며, 아래 URL 을 통하여 다운로드를 진행 해주셔도 됩니다.
