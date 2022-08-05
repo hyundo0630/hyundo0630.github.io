@@ -66,7 +66,7 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 # mkdir -p /home/source
 # cd /home/source
 ```
-<br>
+
 <div style="font-size:16px;">
 <li>apr Download URL</li>
 </div>
@@ -90,9 +90,46 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 ```
 
 <div style="font-size:16px;">
-&nbsp;pcre 는 **pcer.org** 에서 다운로드가 가능하며, 아래 URL 을 통하여 다운로드를 진행 해주셔도 됩니다.
+&nbsp;pcre 는 **pcer.org** 에서 다운로드가 가능하며, 아래 URL 을 통하여 다운로드를<p> 진행 해주셔도 됩니다.</p>
 </div>
 
 ```
-# wget = https://sourceforge.net/projects/pcre/files/pcre/8.4.5/pcre-8.45.tar.gz --no-check-certificate
+# wget https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.gz --no-check-certificate
 ```
+
+## 3. Source 파일 압축 해제
+
+```
+# tar xvfz apr-1.7.0.tar.gz
+# tar xvfz apr-util-1.6.1.tar.gz
+# tar xvfz httpd-2.4.54.tar.gz
+# tar xvfz pcre-8.45.tar.gz
+```
+
+## 4. 컴파일
+
+```
+# cd /home/source/apr-1.7.0
+# ./configure --prefix=/home/source/apr
+# make && make install
+```
+
+```
+# cd /home/source/apr-util-1.6.1
+# ./configure --prefix=/home/source/apr-util --with-apr=/home/source/apr
+# make && make install
+```
+
+```
+# cd /home/source/pcre-8.45
+# ./configure --prefix=/home/source/pcre
+# make && make install
+```
+
+```
+# cd /home/httpd-2.4.54
+# ./configure --prefix=/usr/local/apache2 --with-apr=/home/source/apr --with-apr-util=/home/source/apr-util --with-pcre=/home/source/pcre/bin/pcre-config
+# make && make install
+```
+
+
