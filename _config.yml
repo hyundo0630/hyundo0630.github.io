@@ -105,10 +105,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  name             : "Hyeon-Do BAEK"
+  avatar           : /images/피카츄.gif # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Welcome to my Blog"
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
