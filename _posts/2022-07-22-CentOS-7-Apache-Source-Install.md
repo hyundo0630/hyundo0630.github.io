@@ -87,7 +87,7 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<p><p>
 </div>
 
 ```
-# wget https://downloads.apache.org/httpd/httpd-2.4.5.1.tar.gz
+# wget https://downloads.apache.org/httpd/httpd-2.4.54.tar.gz
 ```
 
 <div style="font-size:16px;">
