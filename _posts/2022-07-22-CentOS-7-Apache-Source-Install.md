@@ -28,7 +28,9 @@ toc_sticky: true
 ```
  yum install -y wget expat-devel gcc gcc-c++
 ```
-<li>wget = CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util</li>
+
+<li>wget</li>
+#### - CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util
 <li>expat-devel = 1. Apache 설치 시 htpasswd error 발생 원인</li>
         2. expat을 가지고 XML 응용 프로그램을 개발하는데 필요한 Libary들과 File들
 <li>gcc = Linux C Compiler - apr 설치 시 필요</li>
