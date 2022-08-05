@@ -15,7 +15,7 @@ toc_sticky: true
 <div style="font-size:16px;">
 테스트 환경<br>
   - OS : CentOS 7<br>
-  - Apache Version : 2.4.6<br></br>
+  - Apache Version : 2.4.6<br><br>
 <li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li>
 </div>
 
@@ -31,6 +31,8 @@ toc_sticky: true
 ```
 
 ## 패키지 설명
+
+### wget
 <div style="font-size:16px;">
 <li>CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util</li>
 </div>
