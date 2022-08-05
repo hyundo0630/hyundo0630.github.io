@@ -1,7 +1,66 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Posts"
+    url: /Posts/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Pages"
+    url: /_pages
+  - title: "Collections"
+    url: /collection-archive/
+  - title: "External Link"
+    url: https://google.com
+
+#docs:
+#  - title: Getting Started
+#    children:
+#      - title: "Quick-Start Guide"
+#        url: /docs/quick-start-guide/
+#      - title: "Structure"
+#        url: /docs/structure/
+#      - title: "Installation"
+#        url: /docs/installation/
+#      - title: "Upgrading"
+#        url: /docs/upgrading/
+
+  - title: Customization
+    children:
+      - title: "Configuration"
+        url: /configuration/
+      - title: "Navigation"
+        url: /navigation/
+      - title: "UI Text"
+        url: /ui-text/
+      - title: "Authors"
+        url: /authors/
+      - title: "Layouts"
+        url: /layouts/
+
+  - title: Content
+    children:
+      - title: "Working with Posts"
+        url: /posts/
+      - title: "Working with Pages"
+        url: /pages/
+      - title: "Working with Collections"
+        url: /collections/
+      - title: "Helpers"
+        url: /helpers/
+      - title: "Utility Classes"
+        url: /utility-classes/
+
+  - title: Extras
+    children:
+      - title: "Stylesheets"
+        url: /stylesheets/
+      - title: "JavaScript"
+        url: /javascript/
+    
+#main:
+#  - title: "Quick-Start Guide"
+#    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
