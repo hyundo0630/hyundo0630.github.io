@@ -28,7 +28,7 @@ toc_sticky: true
 ```
  yum install -y wget expat-devel gcc gcc-c++
 ```
-<font size="12px">
+<font size="8px">
 <li>wget</li>
  - CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util
 <li>expat-devel = 1. Apache 설치 시 htpasswd error 발생 원인</li>
