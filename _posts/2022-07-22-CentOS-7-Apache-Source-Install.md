@@ -31,7 +31,7 @@ toc_sticky: true
 
 ## wget
 <div style="font-size:16px;">
-<li>CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util<li>
+<li>CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util</li>
 </div>
 
 ### expat-devel
@@ -39,7 +39,7 @@ toc_sticky: true
 <li>
 Apache 설치 시 htpasswd error 발생 원인
 expat을 가지고 XML 응용 프로그램을 개발하는데 필요한 Libary들과 File들
-<li>
+</li>
 </div>
 
 ### gcc
