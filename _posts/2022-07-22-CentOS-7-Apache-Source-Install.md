@@ -39,7 +39,7 @@ toc_sticky: true
 </div>
 
 # 2. Source 파일 다운로드
-<div font-size="8px">
+<div font-size="6px">
 &nbsp;apr-util, apache2 의 경우 **apache.org** 에서 다운로드가 가능하며, 아래 URL 을 통하여 다운로드를 진행해주셔도 됩니다.
 
 <li>apr Download URL</li>
