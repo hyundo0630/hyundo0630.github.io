@@ -24,12 +24,12 @@ toc_sticky: true
 
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/CentOS7%20netstat.png?raw=true"><br>
 
-# 1. 필요한 패키지 다운로드 및 설치<br>
+## 1. 필요한 패키지 다운로드 및 설치
 ```
  yum install -y wget expat-devel gcc gcc-c++
 ```
 
-## wget
+## 패키지 설명
 <div style="font-size:16px;">
 <li>CLI(Command Line Interface) 환경에서 URL 을 이용한 파일 다운로드 Util</li>
 </div>
