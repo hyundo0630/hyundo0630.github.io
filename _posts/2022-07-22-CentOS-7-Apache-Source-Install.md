@@ -143,4 +143,12 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 netstat -tnlp
 ```
 
+<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/59b404f42b98ab7b42acb7d7fdfe151b86d9fa6d/images/apache%20Port.png">
 
+## 5. Apache 실행
+
+```
+/usr/local/apache2/bin/apachectl start
+```
+
+## 6. 웹 페이지 접근
