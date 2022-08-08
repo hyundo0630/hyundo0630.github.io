@@ -131,4 +131,16 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 # make && make install
 ```
 
+### 방화벽 설정
+
+```
+# firewall-cmd --permanent --zone=public --add-port=80/tcp
+```
+
+### Port 확인
+
+```
+netstat -tnlp
+```
+
 
