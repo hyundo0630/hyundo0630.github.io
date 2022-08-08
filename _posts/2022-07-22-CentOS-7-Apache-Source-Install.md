@@ -9,7 +9,6 @@ tags :
 toc: true
 toc_sticky: true
 ---
-[font_size]: 
 
 ## [CentOS7] Apache Source Install
 
