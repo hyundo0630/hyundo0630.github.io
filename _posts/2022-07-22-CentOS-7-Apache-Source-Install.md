@@ -152,3 +152,14 @@ netstat -tnlp
 ```
 
 ## 6. 웹 페이지 접근
+
+<div style="font-size:16px;">
+<li> Local PC 의 환경에서 apache 를 실행했을 경우 = localhost:80</li>
+<li> 특정 서버에 환경에서 apache 를 실행했을 경우 = [공인IP:80]</li>
+</div>
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/apache%20web%20page.png?raw=true">
+
+<div style="font-size:16px;">
+<li> 상위와 같이 It works! 가 출력되면 성공입니다. </li>
+
