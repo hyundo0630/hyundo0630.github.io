@@ -16,9 +16,11 @@ Apache 설치의 경우 아래 URL 을 통하여 진행 하실 수 있습니다.
 </div>
 
 ## 테스트 환경
-- OS : CentOS 7
-- Apache Version : 2.4.6
-- PHP Version : 7.2
+<div style="font-size:16px">
+<li>OS : CentOS 7</li>
+<li>Apache Version : 2.4.6</li>
+<li>PHP Version : 7.2</li>
+</div>
 
 ## EPEL 저장소 추가
 
