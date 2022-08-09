@@ -41,6 +41,7 @@ yum install -y epel-release
 <div style="font-size:16px">
 
 - 설치 된 EPEL 은 <code>/etc/yum.repos.d/epel.repo</code> 에서 확인이 가능 하고, 사용하지 않을 경우<br>
-아래와 같이 enabled 옵션을 0 으로 주면 됩니다.<br>
+아래와 같이 enabled 옵션을 0 으로 주면 됩니다.
 </div>
+<br>
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/epel.repo.png?raw=true" width="850" heigth="850">
