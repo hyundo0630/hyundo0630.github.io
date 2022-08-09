@@ -27,7 +27,7 @@ Apache 설치의 경우 아래 URL 을 통하여 진행 하실 수 있습니다.
 <li> EPEL = (Extra Packages for Enterprise Linux)</li>
 　- 기업용 리눅스를 위한 추가 패키지<br>
 　- RHEL 이나 CentOS에 기본적으로 탑재되어있지 않는 패키지를 제공하기 위해<br>
-이런 패키지 저장소가 필요합니다.
+　　이런 패키지 저장소가 필요합니다.
 </div>
 
 ### 설치 방법
