@@ -31,3 +31,8 @@ Apache 설치의 경우 아래 URL 을 통하여 진행 하실 수 있습니다.
 ```
 yum install -y epel-release
 ```
+<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/a3327a8b7c242e97809f950516d172b55788b595/images/epel-release.png">
+
+- 설치 된 EPEL 은 <code>/etc/yum.repos.d/epel.repo</code> 에서 확인이 가능 하고, 사용하지 않을 경우<br>
+아래와 같이 enabled 옵션을 0 으로 주면 됩니다.
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/epel.repo.png?raw=true">
