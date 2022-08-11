@@ -45,3 +45,9 @@ yum install -y epel-release
 </div>
 <br>
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/epel.repo.png?raw=true" width="850" heigth="850">
+
+## webtatic 저장소 추가
+```
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+```
+
