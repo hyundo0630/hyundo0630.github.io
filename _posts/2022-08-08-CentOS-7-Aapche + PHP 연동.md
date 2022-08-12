@@ -69,7 +69,7 @@ yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer p
 ★ vi 편집기 모드에서 <code>/set mu</code> 를 입력하시면 줄 번호를 표시해 줍니다.<br>
 
 <li> 202번 줄 short_open_tag = Off -> On </li>
-　　- 짧은 태그 허용 (php 시작 태그를 <code><?php 가 아닌 <?</code> 로도 사용 허용)<br>
+　　- 짧은 태그 허용
 <br>
 <li> 462번 줄 display_errors = Off -> On </li>
 　　- PHP 관련 오류 발생 시 홈페이지 화면에 오류 내용 노출 설정<br>
