@@ -73,3 +73,9 @@ Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile
 ## 결과 확인
 ```
 # echo $JAVA_HOME
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
+```
+
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
