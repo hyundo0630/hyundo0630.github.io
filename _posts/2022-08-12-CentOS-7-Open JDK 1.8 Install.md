@@ -72,7 +72,7 @@ Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile
 // 변경 내용 적용
 # source /etc/profile
 ```
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/etc_profile.png?raw=true">
 
 ## 결과 확인
 ```
