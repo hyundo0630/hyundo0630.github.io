@@ -15,15 +15,17 @@ toc_sticky: true
 ## [CentOS7] Open JDK Install
 
 
-### 테스트 환경<br>
-- OS : CentOS 7<br>
+### 테스트 환경
+<div style="font-size:16px;">
+<li> OS : CentOS 7 </li>
+</div>
 
 
 ## 현재 설치가 가능한 JDK Version 확인
 ```
 # yum list java*jdk-devel
 ```
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/openJDK%20%EC%84%A4%EC%B9%98%20%EA%B0%80%EB%8A%A5%20list.png?raw=true">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/openJDK%20%EC%84%A4%EC%B9%98%20%EA%B0%80%EB%8A%A5%20list.png?raw=true">
 <div style="font-size:16px;">
 　- 상위와 같이 설치 가능 버전이 확인할 수 있으며, 1.8.0 을 설치 진행 할 예정입니다.
 </div>
@@ -37,11 +39,11 @@ toc_sticky: true
 ```
 # java -version
 ```
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Java%20Version.png?raw=true">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/Java%20Version.png?raw=true">
 
 ### 환경 변수 설정
 
-<li> 경로 확인
+<li> 경로 확인 </li>
 
 ```
 // Javac 설치 경로
@@ -70,6 +72,7 @@ Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile
 // 변경 내용 적용
 # source /etc/profile
 ```
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/etc_profile.png?raw=true">
 
 ## 결과 확인
 ```
