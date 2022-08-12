@@ -14,9 +14,10 @@ toc_sticky: true
 
 ## [CentOS7] Open JDK Install
 
-<div style="font-size:16px;">
-테스트 환경<br>
+
+### 테스트 환경<br>
 - OS : CentOS 7<br>
+
 
 ## 현재 설치가 가능한 JDK Version 확인
 ```
