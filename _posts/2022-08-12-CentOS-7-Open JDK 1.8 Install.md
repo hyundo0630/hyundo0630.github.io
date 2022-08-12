@@ -49,9 +49,27 @@ toc_sticky: true
 
 // /usr/bin/javac 의 실제 경로 확인
 # readlink -f /usr/bin/javac
-/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b15.el7_2.x86_64/bin/javac
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64/bin/javac
 
 // JAVA_HOME 이 될 경로
-# /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b15.el7_2.x86_64
+# /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
 　--> 경로 맨 뒤에 /bin/javac 를 제외해 줍니다.
 ```
+### /etc/profile 적용
+
+<div style="font-size:16px;">
+Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile </code> 맨 하단에 기입해줍니다.<br>
+<div
+
+```
+# vi /etc/profile
+# export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
+# :wq
+
+// 변경 내용 적용
+# source /etc/profile
+```
+
+## 결과 확인
+```
+# echo $JAVA_HOME
