@@ -63,27 +63,28 @@ yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer p
 <li> php-mbstring : multi-byte 문자열 처리 (한글과 같은 2byte 문자열 처리) </li>
 <li> php-mysql : MySQL DataBase 지원 </li>
 <li> php-pear : php 확장 라이브러리 </li>
-
-
+<br>
 설치가 끝났다면 <code> vi /etc/php.ini </code> 를 통해 내부 설정을 변경을 해주어야 합니다.
 
-★ vi 편집기 모드에서 /set mu 를 입력하시면 줄 번호를 표시해 줍니다.
+★ vi 편집기 모드에서 <code>/set mu</code> 를 입력하시면 줄 번호를 표시해 줍니다.
 
 <li> 202번 줄 short_open_tag = Off -> On </li>
-　　- 짧은 태그 허용 (php 시작 태그를 <?php 가 아닌 <? 로도 사용 허용)<br>
+　　- 짧은 태그 허용 (php 시작 태그를 "<?php 가 아닌 <?" 로도 사용 허용)<br>
 
 <li> 462번 줄 display_errors = Off -> On </li>
 　　- PHP 관련 오류 발생 시 홈페이지 화면에 오류 내용 노출 설정<br>
 
-<li> 359번 줄 expose_php = On -> Off
-　　- PHP Version 숨기기
+<li> 359번 줄 expose_php = On -> Off </li>
+　　- PHP Version 숨기기<br>
 
 <li> 810번 줄 allow_url_fopen = On </li>
 　　- 외부 파일을 URL 방식으로 읽을 수 있도록 하는 설정<br>
 
 </div>
 
+
 ## PHP 확장자 Apache 적용 시키기
+
 ```
 # vi /etc/httpd/conf/httpd.conf
 (※ 사용자의 apache 설정 파일 경로를 입력해주시면 됩니다.)
@@ -99,11 +100,13 @@ yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer p
 </div>
 
 ## Apache 재기동
+
 ```
 # systemctl restart httpd
 ```
 
 ### PHP 연동 확인
+
 ```
 # touch /var/www/html/index.php
 # vi /var/www/html/index.php
@@ -119,6 +122,7 @@ phpinfo();
 # localhost/index.php
 # 서버 IP/index.php
 ```
+
 <img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/0f7bff2dcbe804ceb828ad78986673ace9dc4688/images/apache-index.php.png">
 
 <div style="text-align:center;">
