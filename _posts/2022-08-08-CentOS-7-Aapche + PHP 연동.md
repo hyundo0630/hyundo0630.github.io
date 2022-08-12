@@ -87,3 +87,35 @@ yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer p
 ```
 # vi /etc/httpd/conf/httpd.conf
 (※ 사용자의 apache 설정 파일 경로를 입력해주시면 됩니다.)
+```
+<br>
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/apache%20index.php.png?raw=true">
+<div style="font-size:16px;">
+<li> 164번 줄 index.php 추가 </li><br>
+</div>
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/apache%20application-httpd.png?raw=true">
+<div style="font-size:16px;">
+<li> 285번 줄 AddType application/x-httpd-php .html .php .php3 .php4 .inc 추가 </li><br>
+</div>
+
+## Apache 재기동
+```
+# systemctl restart httpd
+```
+
+### PHP 연동 확인
+```
+# touch /var/www/html/index.php
+# vi /var/www/html/index.php
+```
+
+```
+<?php
+phpinfo();
+?>
+```
+
+```
+# localhost/index.php
+# 서버 IP/index.php
+```
