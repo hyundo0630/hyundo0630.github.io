@@ -51,3 +51,39 @@ yum install -y epel-release
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 ```
 
+## PHP7.2 와 일부 라이브러리 설치
+```
+yum install mod_php72w php72w-cli
+yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer php72w-xml php72w-xmlrpc php72w-process
+```
+
+<div style="font-size:16px">
+<li> mod_php72w : Apache HTTP 서버와 연동을 위한 모듈 </li>
+<li> php-bcmath : bcmath 라이브러리 </li>
+<li> php-mbstring : multi-byte 문자열 처리 (한글과 같은 2byte 문자열 처리) </li>
+<li> php-mysql : MySQL DataBase 지원 </li>
+<li> php-pear : php 확장 라이브러리 </li>
+
+
+설치가 끝났다면 <code> vi /etc/php.ini </code> 를 통해 내부 설정을 변경을 해주어야 합니다.
+
+★ vi 편집기 모드에서 /set mu 를 입력하시면 줄 번호를 표시해 줍니다.
+
+<li> 202번 줄 short_open_tag = Off -> On </li>
+　　- 짧은 태그 허용 (php 시작 태그를 <?php 가 아닌 <? 로도 사용 허용)<br>
+
+<li> 462번 줄 display_errors = Off -> On </li>
+　　- PHP 관련 오류 발생 시 홈페이지 화면에 오류 내용 노출 설정<br>
+
+<li> 359번 줄 expose_php = On -> Off
+　　- PHP Version 숨기기
+
+<li> 810번 줄 allow_url_fopen = On </li>
+　　- 외부 파일을 URL 방식으로 읽을 수 있도록 하는 설정<br>
+
+</div>
+
+## PHP 확장자 Apache 적용 시키기
+```
+# vi /etc/httpd/conf/httpd.conf
+(※ 사용자의 apache 설정 파일 경로를 입력해주시면 됩니다.)
