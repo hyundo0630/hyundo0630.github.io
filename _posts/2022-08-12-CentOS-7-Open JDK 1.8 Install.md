@@ -36,3 +36,22 @@ toc_sticky: true
 ```
 # java -version
 ```
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Java%20Version.png?raw=true">
+
+### 환경 변수 설정
+
+<li> 경로 확인
+
+```
+// Javac 설치 경로
+# which javac
+/usr/bin/javac
+
+// /usr/bin/javac 의 실제 경로 확인
+# readlink -f /usr/bin/javac
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b15.el7_2.x86_64/bin/javac
+
+// JAVA_HOME 이 될 경로
+# /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b15.el7_2.x86_64
+　--> 경로 맨 뒤에 /bin/javac 를 제외해 줍니다.
+```
