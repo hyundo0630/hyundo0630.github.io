@@ -62,7 +62,7 @@ toc_sticky: true
 
 <div style="font-size:16px;">
 Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile </code> 맨 하단에 기입해줍니다.<br>
-<div
+</div>
 
 ```
 # vi /etc/profile
