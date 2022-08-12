@@ -23,7 +23,7 @@ toc_sticky: true
 # netstat -tlnp
 ```
 
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/CentOS7%20netstat.png?raw=true"><br>
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/CentOS7%20netstat.png?raw=true"><br>
 
 ## 1. 필요한 패키지 다운로드 및 설치
 ```
@@ -164,5 +164,5 @@ netstat -tnlp
 <li> 상위와 같이 It works! 가 출력되면 성공입니다. </li>
 <br><br>
 <div style="text-align:center;">
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/apache%20web%20page.png?raw=true" width="200" height="200">
 </div>
