@@ -119,3 +119,8 @@ phpinfo();
 # localhost/index.php
 # 서버 IP/index.php
 ```
+<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/0f7bff2dcbe804ceb828ad78986673ace9dc4688/images/apache-index.php.png">
+
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
