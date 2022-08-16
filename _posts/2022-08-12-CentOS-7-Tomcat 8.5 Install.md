@@ -13,13 +13,13 @@ toc_sticky: true
 
 ## [CentOS7] Tomcat 8.5 Install
 
-### 테스트 환경<br>
-- OS : CentOS 7 64bit<br>
-- Open JDK Version : 1.8.0 <br>
-
+## 테스트 환경
 <div style="font-size:16px;">
+<li> : CentOS 7 64bit </li>
+<li> Open JDK Version : 1.8.0 </li>
+
 open JDK 1.8 설치가 안되신 분들은 아래 URL 을 통해 진행 해주시면 됩니다.<br>
- -URL : <a href="https://hyundo0630.github.io/centos/CentOS-7-Open-JDK-1.8-Install/"> Open JDK 1.8 Install</a>
+<li> URL : <a href="https://hyundo0630.github.io/centos/CentOS-7-Open-JDK-1.8-Install/"> Open JDK 1.8 Install</a></li>
 </div>
 
 ## Open JDK 설치 확인
