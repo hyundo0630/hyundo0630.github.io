@@ -53,7 +53,7 @@ OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
 
 ```
 // 맨 하단에 입력
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
 CATALINA_HOME=/usr/local/tomcat8
 CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/lib-jsp-api.jar:$CATAL
 INA_HOME/lib/servlet-api.jar
