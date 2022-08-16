@@ -16,10 +16,10 @@ toc_sticky: true
 <div style="font-size:16px;">
 테스트 환경<br>
 - OS : CentOS 7 64bit<br>
-- Open JDK Version : 1.8.0
+- Open JDK Version : 1.8.0 <br>
 
 open JDK 1.8 설치가 안되신 분들은 아래 URL 을 통해 진행 해주시면 됩니다.
-<li> URL : <a href="https://hyundo0630.github.io/centos/CentOS-7-Open-JDK-1.8-Install/"> Open JDK 1.8 Install </li>
+ -URL : <a href="https://hyundo0630.github.io/centos/CentOS-7-Open-JDK-1.8-Install/"> Open JDK 1.8 Install</a>
 </div>
 
 ## Open JDK 설치 확인
