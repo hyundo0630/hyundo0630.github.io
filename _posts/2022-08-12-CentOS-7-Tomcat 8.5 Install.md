@@ -62,3 +62,5 @@ export JAVA_HOME PATH CLASSPATH CATALINA_HOME
 ```
 
 ```
+# source /etc/profile
+```
