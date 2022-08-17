@@ -45,6 +45,15 @@ OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
 // 폴더 이동
 # mv apache-tomcat-8.5.27.tar.gz /usr/local/tomcat8
 ```
+### Server.xml 설정
+```
+# vim /usr/local/tomcat8/conf/server.xml
+
+// 아래 구문 추가
+<Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" />
+```
+
+<img src=">
 
 ## 환경 변수 등록
 ```
