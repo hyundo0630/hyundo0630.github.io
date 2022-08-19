@@ -53,7 +53,7 @@ OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
 <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" URIEncoding="UTF-8" />
 ```
 
-<img src=">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Tomcat%20%EA%B4%80%EB%A0%A8/Server.xml.png?raw=true">
 
 ## 환경 변수 등록
 ```
@@ -64,8 +64,7 @@ OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
 // 맨 하단에 입력
 JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
 CATALINA_HOME=/usr/local/tomcat8
-CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/lib-jsp-api.jar:$CATAL
-INA_HOME/lib/servlet-api.jar
+CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/lib-jsp-api.jar:$CATALINA_HOME/lib/servlet-api.jar
 PATH=$PATH:$JAVA_HOME/bin:/bin:/sbin
 export JAVA_HOME PATH CLASSPATH CATALINA_HOME
 ```
@@ -73,3 +72,9 @@ export JAVA_HOME PATH CLASSPATH CATALINA_HOME
 ```
 # source /etc/profile
 ```
+
+## Tomcat 8.5 실행
+```
+# /usr/local/tomcat8/bin/startup.sh
+```
+
