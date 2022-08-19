@@ -78,3 +78,5 @@ export JAVA_HOME PATH CLASSPATH CATALINA_HOME
 # /usr/local/tomcat8/bin/startup.sh
 ```
 
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Tomcat%20%EA%B4%80%EB%A0%A8/Tomcat%20%EC%8B%A4%ED%96%89.png?raw=true">
+
