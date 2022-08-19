@@ -80,3 +80,21 @@ export JAVA_HOME PATH CLASSPATH CATALINA_HOME
 
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Tomcat%20%EA%B4%80%EB%A0%A8/Tomcat%20%EC%8B%A4%ED%96%89.png?raw=true">
 
+### 포트 확인
+```
+# netstat -tnlp
+```
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Tomcat%20%EA%B4%80%EB%A0%A8/Port%20%ED%99%95%EC%9D%B8.png?raw=true">
+8009, 8080, 8005 Port 올라왔는지 확인
+
+### 페이지 출력 확인
+```
+localhost:8080
+서버IP:8080
+```
+
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
+
