@@ -93,6 +93,7 @@ export JAVA_HOME PATH CLASSPATH CATALINA_HOME
 localhost:8080
 서버IP:8080
 ```
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Tomcat%20%EA%B4%80%EB%A0%A8/Tomcat%20%EB%A9%94%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
 
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
