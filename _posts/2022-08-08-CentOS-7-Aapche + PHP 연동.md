@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Apache + PHP 연동"
 categories : 
-    - CentOS
+    - Apache
 tags :
     - CentOS 7
     - Apache
@@ -33,7 +33,7 @@ Apache 설치의 경우 아래 URL 을 통하여 진행 하실 수 있습니다.
 </div>
 
 ### 설치 방법
-```
+```go
 yum install -y epel-release
 ```
 <img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/a3327a8b7c242e97809f950516d172b55788b595/images/epel-release.png">
@@ -47,12 +47,12 @@ yum install -y epel-release
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20PHP%20%EC%97%B0%EB%8F%99/epel.repo.png?raw=true" width="850" heigth="850">
 
 ## webtatic 저장소 추가
-```
+```go
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 ```
 
 ## PHP7.2 와 일부 라이브러리 설치
-```
+```go
 yum install mod_php72w php72w-cli
 yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer php72w-xml php72w-xmlrpc php72w-process
 ```
@@ -84,7 +84,7 @@ yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer p
 
 ## PHP 확장자 Apache 적용 시키기
 
-```
+```go
 # vi /etc/httpd/conf/httpd.conf
 (※ 사용자의 apache 설정 파일 경로를 입력해주시면 됩니다.)
 ```
@@ -100,24 +100,24 @@ yum install php72w-bcmath php72w-gd php72w-mbstring php72w-mysqlnd php72w-peer p
 
 ## Apache 재기동
 
-```
+```go
 # systemctl restart httpd
 ```
 
 ### PHP 연동 확인
 
-```
+```go
 # touch /var/www/html/index.php
 # vi /var/www/html/index.php
 ```
 
-```
+```go
 <?php
 phpinfo();
 ?>
 ```
 
-```
+```go
 # localhost/index.php
 # 서버 IP/index.php
 ```
