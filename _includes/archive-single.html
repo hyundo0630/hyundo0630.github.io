@@ -24,6 +24,9 @@
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    {{ post.date | date: " %Y.%m.%d" }}
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i>{{ post.date | date: " %Y.%m.%d" }}
+    {% if site.category_archive.type and post.categories[0] and site.tag_archive.type and post.tags[0] %}
+      {%- include post__taxonomy.html -%}
+    {% endif %}
   </article>
 </div>
