@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Apache Install"
 categories : 
-    - CentOS
+    - Apache
 tags :
     - CentOS 7
     - Apache
