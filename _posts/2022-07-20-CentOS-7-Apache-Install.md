@@ -12,11 +12,10 @@ toc_sticky: true
 
 
 테스트 환경<br>
-<li>OS : CentOS 7</li><br>
-<li>Apache Version : 2.4.6</li><br>
-
-<li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li>
-```
+<li>OS : CentOS 7</li>
+<li>Apache Version : 2.4.6</li>
+<li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li><br>
+```go
 # netstat -tlnp
 ```
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/CentOS7%20netstat.png?raw=true">
@@ -31,7 +30,7 @@ yum install httpd httpd-devel
 <br>
 
 ## Apache 기동
-```
+```go
 # systemctl enable httpd ## 서버 재기동 시 자동 기동 되도록 설정
 # systemctl start httpd ## Apache 실행
 ```
