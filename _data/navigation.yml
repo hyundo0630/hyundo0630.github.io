@@ -1,17 +1,9 @@
 # main links
 main:
-  - title: "Posts"
-    url: /Posts/
+  - title: "Home"
+    url: /index.html
   - title: "Categories"
     url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "Pages"
-    url: /_pages
-  - title: "Collections"
-    url: /collection-archive/
-  - title: "External Link"
-    url: https://google.com
 
 #docs:
 #  - title: Getting Started
