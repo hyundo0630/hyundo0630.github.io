@@ -1,7 +1,7 @@
 ---
 title: "Apache"
 layout: archive
-permalink: categories/Apache
+permalink: /categories/Apache
 author_profile: true
 sidebar_main: true
 ---
