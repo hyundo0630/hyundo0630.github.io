@@ -25,12 +25,7 @@
       {% endif %}
     </h2>
     <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i>{{ post.date | date: " %Y.%m.%d" }}
-    {% if site.tag_archive.type and page.tags[0] %}
-    {% include tag-list.html %}
-    {% endif %}
-  
-    {% if site.category_archive.type and page.categories[0] %}
-    {% include category-list.html %}
+    {%- include post__taxonomy.html -%}
     {% endif %}
   </article>
 </div>
