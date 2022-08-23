@@ -8,4 +8,4 @@ sidebar_main: true
 
 
 {% assign posts = site.categories.Apache %}
-{% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}098
+{% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
