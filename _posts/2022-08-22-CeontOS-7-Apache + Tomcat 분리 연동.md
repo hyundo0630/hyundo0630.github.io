@@ -77,7 +77,7 @@ Total download size: 43 M
 Is this ok [y/d/N]: y
 ```
 
-```javascript
+```java
 # wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
 
 --2022-09-05 16:13:22--  http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
@@ -100,7 +100,7 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ### 컴파일 진행
-```java
+```sql
 # ./configure --with-apxs=/home/apache/bin/apxs
 # make && make install
 ```
