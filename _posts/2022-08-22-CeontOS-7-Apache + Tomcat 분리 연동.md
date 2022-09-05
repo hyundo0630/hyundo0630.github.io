@@ -31,11 +31,11 @@ toc_sticky: true
 
 <li> 설치가 되어 있는 항목은 제외 하고 진행 해 주시면 됩니다. </li>
 
-```javascript
+```java
 # yum install gcc gcc-++ httpd-devel
 ```
 
-```javascript
+```java
 Dependencies Resolved
 
 ====================================================================================================================================================
@@ -93,20 +93,20 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ### 압축 해제
-```javascript
+```java
 # tar xvf tomcat-connectors-1.2.48-src.tar.gz
 # mv tomcat-connectors-1.2.48-src/ /usr/local/src
 # cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
 ```
 
 ### 컴파일 진행
-```javascript
+```java
 # ./configure --with-apxs=/home/apache/bin/apxs
 # make && make install
 ```
 
 ### mod_jk 설치 확인
-```javascript
+```java
 # ll /home/apache/modules/ | grep mod_jk
 -rwxr-xr-x 1 root root 1565864 Dec 22 03:29 mod_jk.so
 ```
@@ -114,11 +114,11 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ## Apache 설정
 <li> httpd.conf 내 LoadModule 추가 </li>
 
-```javascript
+```java
 # vim /etc/httpd/conf/httpd.conf // 본인 apache conf 경로 입력
 ```
 
-```javascript
+```java
 // 아래 구문 추가
 # LoadModule jk_module modules/mod_jk.so
 
@@ -130,11 +130,11 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ## Mod_jk.conf 파일 생성
-```javascript
+```java
 # mkdir -p /home/apache/conf.modules.d
 # vi /home/apache/conf.modules.d/mod_jk.conf
 ```
-```javascript
+```java
 // 아래 구문 추가
 <IfModule jk_module>
  JkWorkersFile conf/workers.properties
@@ -147,10 +147,10 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 
 ## worker.properties 파일 생성
 
-```javascript
+```java
 # vi /home/apache/conf/worker.properties
 ```
-```javascript
+```java
 // 아래 구문 추가
 worker.list=bhd // 원하는 worker,list 이름 기입
 worker.bhd.port=8009
@@ -160,7 +160,7 @@ worker.bhd.lbfactor=1
 ```
 
 ## Apache & Tomcat 재기동
-```javascript
+```java
 # systemctl restart httpd
 # systemctl restart tomcat8
 ```
@@ -168,7 +168,7 @@ worker.bhd.lbfactor=1
 ## Apache + Tomcat 연동 확인
 <li> Apache Server </li>
 
-```javascript
+```java
 // curl localhost IP 주소/index.jsp
 # curl 172.27.0.174/index.jsp
 
