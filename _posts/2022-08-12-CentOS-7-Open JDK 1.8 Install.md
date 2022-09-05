@@ -20,7 +20,7 @@ toc_sticky: true
 
 
 ## 현재 설치가 가능한 JDK Version 확인
-```go
+```java
 # yum list java*jdk-devel
 ```
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/openJDK%20%EC%84%A4%EC%B9%98%20%EA%B0%80%EB%8A%A5%20list.png?raw=true">
@@ -29,12 +29,12 @@ toc_sticky: true
 </div>
 
 ## Open JDK 1.8.0 설치 진행
-```go
+```java
 # yum install java-1.8.0-openjdk-devel.x86_64
 ```
 
 ### 설치 확인
-```go
+```java
 # java -version
 ```
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/Java%20Version.png?raw=true">
@@ -43,7 +43,7 @@ toc_sticky: true
 
 <li> 경로 확인 </li>
 
-```go
+```java
 // Javac 설치 경로
 # which javac
 /usr/bin/javac
@@ -62,7 +62,7 @@ toc_sticky: true
 Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile </code> 맨 하단에 기입해줍니다.<br>
 </div>
 
-```go
+```java
 # vi /etc/profile
 # export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
 # :wq
@@ -74,7 +74,7 @@ Javac 설치 경로를 확인 하셨다면, 해당 경로를 <code> /etc/profile
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/OpenJDK1.8%20%EA%B4%80%EB%A0%A8/etc_profile.png?raw=true">
 
 ## 결과 확인
-```go
+```java
 # echo $JAVA_HOME
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64
 ```

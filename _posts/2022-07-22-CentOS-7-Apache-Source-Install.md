@@ -17,14 +17,15 @@ toc_sticky: true
 <li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li>
 
 
-```
+```java
 # netstat -tlnp
 ```
 
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/CentOS7%20netstat.png?raw=true"><br>
 
 ## 필요한 패키지 다운로드 및 설치
-```
+
+```java
  yum install -y wget expat-devel gcc gcc-c++
 ```
 
@@ -59,7 +60,7 @@ apr-util, apache2 의 경우 **apache.org** 에서 다운로드가 가능하며,
 Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 </div>
 
-```go
+```java
 # mkdir -p /home/source
 # cd /home/source
 ```
@@ -68,21 +69,23 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 <li>apr Download URL</li>
 </div>
 
-```go
+```java
 # wget https://downloads.apache.org/apr/apr-1.7.0.tar.gz
 ```
+
 <div style="font-size:16px;">
 <li>apr-util Download URL</li>
 </div>
 
-```go
+```java
 # wget https://downloads.apache.org/apr/apr-util-1.6.1.tar.gz
 ```
+
 <div style="font-size:16px;">
 <li> apache2 Download URL</li>
 </div>
 
-```go
+```java
 # wget https://downloads.apache.org/httpd/httpd-2.4.54.tar.gz
 ```
 
@@ -90,13 +93,13 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 &nbsp;pcre 는 **pcer.org** 에서 다운로드가 가능하며, 아래 URL 을 통하여 다운로드를<p> 진행 해주셔도 됩니다.</p>
 </div>
 
-```go
+```java
 # wget https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.gz --no-check-certificate
 ```
 
 ## Source 파일 압축 해제
 
-```go
+```java
 # tar xvfz apr-1.7.0.tar.gz
 # tar xvfz apr-util-1.6.1.tar.gz
 # tar xvfz httpd-2.4.54.tar.gz
@@ -105,25 +108,25 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 
 ## 컴파일
 
-```go
+```java
 # cd /home/source/apr-1.7.0
 # ./configure --prefix=/home/source/apr
 # make && make install
 ```
 
-```go
+```java
 # cd /home/source/apr-util-1.6.1
 # ./configure --prefix=/home/source/apr-util --with-apr=/home/source/apr
 # make && make install
 ```
 
-```go
+```java
 # cd /home/source/pcre-8.45
 # ./configure --prefix=/home/source/pcre
 # make && make install
 ```
 
-```go
+```java
 # cd /home/httpd-2.4.54
 # ./configure --prefix=/usr/local/apache2 --with-apr=/home/source/apr --with-apr-util=/home/source/apr-util --with-pcre=/home/source/pcre/bin/pcre-config
 # make && make install
@@ -131,13 +134,13 @@ Source 설치 파일을 저장할 디렉토리 생성 및 이동<br><br>
 
 ### 방화벽 설정
 
-```go
+```java
 # firewall-cmd --permanent --zone=public --add-port=80/tcp
 ```
 
 ### Port 확인
 
-```go
+```java
 netstat -tnlp
 ```
 
@@ -145,7 +148,7 @@ netstat -tnlp
 
 ## Apache 실행
 
-```go
+```java
 /usr/local/apache2/bin/apachectl start
 ```
 
