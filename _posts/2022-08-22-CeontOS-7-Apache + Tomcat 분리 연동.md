@@ -31,11 +31,11 @@ toc_sticky: true
 
 <li> 설치가 되어 있는 항목은 제외 하고 진행 해 주시면 됩니다. </li>
 
-```go
+```javascript
 # yum install gcc gcc-++ httpd-devel
 ```
 
-```go
+```javascript
 Dependencies Resolved
 
 ====================================================================================================================================================
@@ -77,7 +77,7 @@ Total download size: 43 M
 Is this ok [y/d/N]: y
 ```
 
-```go
+```javascript
 # wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
 
 --2022-09-05 16:13:22--  http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
@@ -93,31 +93,32 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ### 압축 해제
-```go
+```javascript
 # tar xvf tomcat-connectors-1.2.48-src.tar.gz
 # mv tomcat-connectors-1.2.48-src/ /usr/local/src
 # cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
 ```
 
 ### 컴파일 진행
-```go
+```javascript
 # ./configure --with-apxs=/home/apache/bin/apxs
 # make && make install
 ```
 
 ### mod_jk 설치 확인
-```go
+```javascript
 # ll /home/apache/modules/ | grep mod_jk
 -rwxr-xr-x 1 root root 1565864 Dec 22 03:29 mod_jk.so
 ```
 
 ## Apache 설정
 <li> httpd.conf 내 LoadModule 추가 </li>
-```go
+
+```javascript
 # vim /etc/httpd/conf/httpd.conf // 본인 apache conf 경로 입력
 ```
 
-```go
+```javascript
 // 아래 구문 추가
 # LoadModule jk_module modules/mod_jk.so
 
@@ -129,11 +130,11 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ## Mod_jk.conf 파일 생성
-```go
+```javascript
 # mkdir -p /home/apache/conf.modules.d
 # vi /home/apache/conf.modules.d/mod_jk.conf
 ```
-```go
+```javascript
 // 아래 구문 추가
 <IfModule jk_module>
  JkWorkersFile conf/workers.properties
@@ -145,10 +146,11 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ## worker.properties 파일 생성
-```go
+
+```javascript
 # vi /home/apache/conf/worker.properties
 ```
-```
+```javascript
 // 아래 구문 추가
 worker.list=bhd // 원하는 worker,list 이름 기입
 worker.bhd.port=8009
@@ -158,14 +160,15 @@ worker.bhd.lbfactor=1
 ```
 
 ## Apache & Tomcat 재기동
-```go
+```javascript
 # systemctl restart httpd
 # systemctl restart tomcat8
 ```
 
 ## Apache + Tomcat 연동 확인
 <li> Apache Server </li>
-```go
+
+```javascript
 // curl localhost IP 주소/index.jsp
 # curl 172.27.0.174/index.jsp
 
