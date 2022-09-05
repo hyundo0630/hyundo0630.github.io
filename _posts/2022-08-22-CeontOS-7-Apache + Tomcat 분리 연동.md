@@ -25,6 +25,7 @@ toc_sticky: true
 <li> IP : 172.27.0.215 </li>
 <li> Tomcat Version : 8.5 </li>
 <li> Java Version : 1.8.0 </li>
+</div>
 
 ## Tomcat-Connector(mod_jk) 설치
 
