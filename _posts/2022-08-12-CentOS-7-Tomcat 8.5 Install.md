@@ -43,7 +43,7 @@ $ wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-
 $ tar zxvf apache-tomcat-8.5.27.tar.gz
 
 // 폴더 이동
-$ mv apache-tomcat-8.5.27.tar.gz /usr/local/tomcat8
+$ mv apache-tomcat-8.5.27 /usr/local/tomcat8
 ```
 ### Server.xml 설정
 ```bash
