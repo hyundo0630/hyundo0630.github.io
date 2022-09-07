@@ -26,16 +26,22 @@ toc_sticky: true
 <li> Tomcat Version : 8.5 </li>
 <li> Java Version : 1.8.0 </li>
 </div>
+<br>
 
-## Tomcat-Connector(mod_jk) 설치
+## Apache Server setting
+<li> Apache 설치가 안되신 분들은 아래 URL 접근하여 설치 진행해주시면 됩니다.</li>
+<li> URL : <a href="https://hyundo0630.github.io/apache/CentOS-7-Apache-Install/"> Apache Install </a></li>
+<br>
+
+### Tomcat-Connector(mod_jk) 설치
 
 <li> 설치가 되어 있는 항목은 제외 하고 진행 해 주시면 됩니다. </li>
 
-```java
-# yum install gcc gcc-++ httpd-devel
+```bash
+$ yum install gcc gcc-++ httpd-devel
 ```
 
-```java
+```bash
 Dependencies Resolved
 
 ====================================================================================================================================================
@@ -77,8 +83,8 @@ Total download size: 43 M
 Is this ok [y/d/N]: y
 ```
 
-```java
-# wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
+```bash
+$ wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
 
 --2022-09-05 16:13:22--  http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
 Resolving mirror.navercorp.com (mirror.navercorp.com)... 125.209.216.167
@@ -93,87 +99,102 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ```
 
 ### 압축 해제
-```java
-# tar xvf tomcat-connectors-1.2.48-src.tar.gz
-# mv tomcat-connectors-1.2.48-src/ /usr/local/src
-# cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
+```bash
+$ tar xvf tomcat-connectors-1.2.48-src.tar.gz
+$ mv tomcat-connectors-1.2.48-src/ /usr/local/src
+$ cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
 ```
 
 ### 컴파일 진행
-```sql
-# ./configure --with-apxs=/home/apache/bin/apxs
-# make && make install
+```bash
+$ ./configure --with-apxs=/usr/local/apxs
+$ make && make install
 ```
 
 ### mod_jk 설치 확인
-```java
-# ll /home/apache/modules/ | grep mod_jk
+```bash
+$ ll /etc/httpd/modules/ | grep mod_jk
 -rwxr-xr-x 1 root root 1565864 Dec 22 03:29 mod_jk.so
 ```
 
-## Apache 설정
+### Apache 설정
 <li> httpd.conf 내 LoadModule 추가 </li>
 
-```java
-# vim /etc/httpd/conf/httpd.conf // 본인 apache conf 경로 입력
+```bash
+$ vim /etc/httpd/conf/httpd.conf // 본인 apache conf 경로 입력
 ```
 
-```java
+```bash
 // 아래 구문 추가
-# LoadModule jk_module modules/mod_jk.so
-
-// vhosts.conf 파일 include
-# Include conf/extra/httpd-vhosts.conf
-
-// mod_jk.conf 파일 include
-# Include conf.modules.d/mod_jk.conf
+$ LoadModule jk_module modules/mod_jk.so
+$ Include conf.d/*.conf
 ```
 
-## Mod_jk.conf 파일 생성
-```java
-# mkdir -p /home/apache/conf.modules.d
-# vi /home/apache/conf.modules.d/mod_jk.conf
+### Mod_jk.conf 파일 생성
+```bash
+$ mkdir -p /etc/httpd/conf.d/httpd-vhost.conf
+$ vi /etc/httpd/conf.d/mod_jk.conf
 ```
-```java
+```bash
 // 아래 구문 추가
 <IfModule jk_module>
  JkWorkersFile conf/workers.properties
- JkShmFile /home/apache/logs/mod_jk.shm
- JkLogFile /home/apache/logs/mod_jk.log
+ JkShmFile /etc/httpd/logs/mod_jk.shm
+ JkLogFile /etc/httpd/logs/mod_jk.log
  JkLogLevel info
  JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
 </IfModule>
 ```
+### httpd-vhost.conf 파일 생성
+```bash
+<VirtualHost *:80>
+    ServerName localhost
+    DocumentRoot /home/bhd/www
 
-## worker.properties 파일 생성
+    CustomLog "logs/bhd.access_log" combined
+    ErrorLog  "logs/bhd.error_log"
 
-```java
-# vi /home/apache/conf/worker.properties
+    JkMount /*.jsp bhd
+</VirtualHost>
 ```
-```java
+
+### worker.properties 파일 생성
+
+```bash
+$ vi /etc/httpd/conf/worker.properties
+```
+```bash
 // 아래 구문 추가
 worker.list=bhd // 원하는 worker,list 이름 기입
 worker.bhd.port=8009
-worker.bhd.host=172.27.0.142 // WAS Servier IP 기입
+worker.bhd.host=172.27.0.215 // WAS Servier IP 기입
 worker.bhd.type=ajp13
 worker.bhd.lbfactor=1
 ```
 
+## Tomcat Server Setting
+<li> Tomcat 설치가 안되신 분들은 아래 URL 접근하여 설치 진행해주시면 됩니다.</li>
+<li> URL : <a href="https://hyundo0630.github.io/tomcat/CentOS-7-Tomcat-8.5-Install/"> Tomcat install </a></li>
+<br>
+
+### Tomcat Server.xml 설정 변경
+
+
 ## Apache & Tomcat 재기동
-```java
-# systemctl restart httpd
-# systemctl restart tomcat8
+```bash
+$ systemctl restart httpd
+$ systemctl restart tomcat8
 ```
 
 ## Apache + Tomcat 연동 확인
 <li> Apache Server </li>
 
-```java
+```bash
 // curl localhost IP 주소/index.jsp
-# curl 172.27.0.174/index.jsp
+$ curl 172.27.0.174/index.jsp
 
 // curl 로 정상적으로 호출이 된다면 웹 사이트에서 확인
-# http://공인 IP/index.jsp
+$ http://공인 IP/index.jsp
 ```
 
 <div style="text-align:center;">
