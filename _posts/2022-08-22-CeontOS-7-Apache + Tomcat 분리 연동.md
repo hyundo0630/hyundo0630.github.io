@@ -178,7 +178,8 @@ worker.bhd.lbfactor=1
 <br>
 
 ### Tomcat Server.xml 설정 변경
-
+<li> 상위 URL 내 8009 Port 설정 진행 해주시면 됩니다. </li>
+<br>
 
 ## Apache & Tomcat 재기동
 ```bash
@@ -191,7 +192,7 @@ $ systemctl restart tomcat8
 
 ```bash
 // curl localhost IP 주소/index.jsp
-$ curl 172.27.0.174/index.jsp
+$ curl 172.27.0.215/index.jsp
 
 // curl 로 정상적으로 호출이 된다면 웹 사이트에서 확인
 $ http://공인 IP/index.jsp
