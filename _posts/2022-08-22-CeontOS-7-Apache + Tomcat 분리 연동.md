@@ -192,7 +192,7 @@ $ systemctl restart tomcat8
 
 ```bash
 // curl localhost IP 주소/index.jsp
-$ curl 172.27.0.215/index.jsp
+$ curl 172.27.0.98/index.jsp
 
 // curl 로 정상적으로 호출이 된다면 웹 사이트에서 확인
 $ http://공인 IP/index.jsp
