@@ -154,7 +154,7 @@ $ vi /etc/httpd/conf.d/mod_jk.conf
     CustomLog "logs/bhd.access_log" combined
     ErrorLog  "logs/bhd.error_log"
 
-    JkMount /*.jsp bhd
+    JkMount /* bhd
 </VirtualHost>
 ```
 
