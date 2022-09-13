@@ -205,8 +205,3 @@ $ http://공인 IP/index.jsp
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
 </div>
-<br>
-
-<div style="text-align:Right;">
-<img src=https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EB%AA%A9%EB%A1%9D%EC%9C%BC%EB%A1%9C.png?raw=true width="150" height="150">
-</div>
