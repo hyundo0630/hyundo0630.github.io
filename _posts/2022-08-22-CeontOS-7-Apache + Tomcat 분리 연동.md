@@ -174,7 +174,7 @@ worker.bhd.lbfactor=1
 
 ## Tomcat Server Setting
 <li> Tomcat 설치가 안되신 분들은 아래 URL 접근하여 설치 진행해주시면 됩니다.</li>
-<li> URL : <a href="https://hyundo0630.github.io/tomcat/CentOS-7-Tomcat-8.5-Install/"> Tomcat install </a></li>
+<li> URL : <a href="https://hyundo0630.github.io/tomcat/CentOS-7-Tomcat-8.5-Install/"> Tomcat Install </a></li>
 <br>
 
 ### Tomcat Server.xml 설정 변경
