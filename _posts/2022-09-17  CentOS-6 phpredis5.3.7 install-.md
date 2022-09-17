@@ -102,8 +102,30 @@ extenstion=/usr/lib64/php/modules/redis.so
 session.save_handler = redis
 session.save_path = "tcp://127.0.0.1:6379"
 ```
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Redis%20%EA%B4%80%EB%A0%A8/phpinfo.png?raw=true"><br>
+<li> 위와 같이 별도의 redis 섹션이 존재하면 완료 입니다.</li><br>
 
+### php redis 연동 테스트
 
+```bash
+<?php
+$redis_host = "127.0.0.1";
+$redis_port = "6379";
+echo "<h1>redis 테스트<h1><br/>";
+try {
+    $redis = new Redis();
+    $redis->connect($redis_host, $redis_port, 1000);
+    $key = "test_val";
+    $val = "test_val";
+    $redis->set($key, $val);
+
+    echo $redis->get($key); #화면에 test_val이 출력될 것이다.
+} catch(Exception $e) {
+    die($e->getMessage());
+}
+
+// 위와 같이 적용 시켰을 때 웹 페이지에서 test_val 값이 나오면 성공입니다,
+```
 <br><br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
