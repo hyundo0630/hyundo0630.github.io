@@ -64,8 +64,42 @@ make[1]: Leaving directory `/home/ncloud/redis-3.2.12/src'
 $ cp -aurp ./src/ /etc/redis/
 ```
 
-<li> 복사가 되었다면 ./utils/install_server.sh 를 한번 실행해 설치를 진행 해주도록 합니다.</li>
+<li> 복사가 되었다면 ./utils/install_server.sh 를 한번 실행해 설치를 진행 해주도록 합니다.</li><br>
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Redis%20%EA%B4%80%EB%A0%A8/install_server.sh.png?raw=true">
+<br>
+<li>executable path [] 는 /etc/redis/redis-server 로 기입하여 줍니다.</li>
 
+### Redis-server 기동 확인
+```bash
+$ netstat -tnlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name   
+tcp        0      0 127.0.0.1:6379              0.0.0.0:*                   LISTEN      8111/redis-server 1 
+tcp        0      0 0.0.0.0:111                 0.0.0.0:*                   LISTEN      773/rpcbind         
+tcp        0      0 0.0.0.0:22                  0.0.0.0:*                   LISTEN      1152/sshd           
+tcp        0      0 127.0.0.1:25                0.0.0.0:*                   LISTEN      1035/master         
+tcp        0      0 0.0.0.0:55322               0.0.0.0:*                   LISTEN      791/rpc.statd       
+tcp        0      0 :::111                      :::*                        LISTEN      773/rpcbind         
+tcp        0      0 :::22                       :::*                        LISTEN      1152/sshd           
+tcp        0      0 ::1:25                      :::*                        LISTEN      1035/master         
+tcp        0      0 :::35449                    :::*                        LISTEN      791/rpc.statd 
+```
+
+<li>6389 Port 로 정상 올라온 것을 확인 하실 수 있습니다.</li>
+
+## 설치 점검
+
+### 버전 확인
+```bash
+$ /etc/redis/redis-server
+```
+
+### redis-cli 실행
+```bash
+$ /etc/redis/redis-cli
+127.0.0.1:6379> ping
+PONG
+```
 
 <br><br>
 <div style="text-align:center;">
