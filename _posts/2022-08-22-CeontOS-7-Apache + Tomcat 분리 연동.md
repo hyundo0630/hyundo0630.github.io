@@ -101,7 +101,7 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ### 압축 해제
 ```bash
 $ tar xvf tomcat-connectors-1.2.48-src.tar.gz
-$ mv tomcat-connectors-1.2.48-src/ /usr/local/src
+$ mv tomcat-connectors-1.2.48-src/ /usr/bin/src
 $ cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
 ```
 
@@ -132,8 +132,8 @@ $ Include conf.d/*.conf
 
 ### Mod_jk.conf 파일 생성
 ```bash
-$ mkdir -p /etc/httpd/conf.d/httpd-vhost.conf
-$ vi /etc/httpd/conf.d/mod_jk.conf
+$ vim /etc/httpd/conf.d/httpd-vhost.conf
+$ vim /etc/httpd/conf.d/mod_jk.conf
 ```
 ```bash
 // 아래 구문 추가
@@ -161,7 +161,7 @@ $ vi /etc/httpd/conf.d/mod_jk.conf
 ### worker.properties 파일 생성
 
 ```bash
-$ vi /etc/httpd/conf/worker.properties
+$ vi /etc/httpd/conf/workers.properties
 ```
 ```bash
 // 아래 구문 추가
@@ -170,6 +170,8 @@ worker.bhd.port=8009
 worker.bhd.host=172.27.0.215 // WAS Servier IP 기입
 worker.bhd.type=ajp13
 worker.bhd.lbfactor=1
+
+복사/붙여넣기를 하실 경우 // 뒤에있는 항목은 꼭 삭제 부탁 드립니다.
 ```
 
 ## Tomcat Server Setting
