@@ -108,21 +108,7 @@ session.save_path = "tcp://127.0.0.1:6379"
 ### php redis 연동 테스트
 
 ```bash
-<?php
-$redis_host = "127.0.0.1";
-$redis_port = "6379";
-echo "<h1>redis 테스트<h1><br/>";
-try {
-    $redis = new Redis();
-    $redis->connect($redis_host, $redis_port, 1000);
-    $key = "test_val";
-    $val = "test_val";
-    $redis->set($key, $val);
-
-    echo $redis->get($key); #화면에 test_val이 출력될 것이다.
-} catch(Exception $e) {
-    die($e->getMessage());
-}
+` ㅌㅋㅍㅊ뉴무`
 
 // 위와 같이 적용 시켰을 때 웹 페이지에서 test_val 값이 나오면 성공입니다,
 ```
