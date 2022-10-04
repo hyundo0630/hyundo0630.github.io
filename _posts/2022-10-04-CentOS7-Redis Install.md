@@ -56,6 +56,13 @@ Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
 tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      2646/redis-server 1 
 ```
+
+```bash
+$ redis-cli
+
+127.0.0.1:6379> ping
+PONG
+```
 <br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
