@@ -15,9 +15,9 @@ toc_sticky: true
 <li>MySQL Version : 5.5</li>
 <br>
 
-## MySQL 설치
+## MySQL 5.5 설치 전 확인
 ```bash
-$ yum install mysql-server
+$ rpm -qa | grep mysql*
 ```
 ```bash
 
