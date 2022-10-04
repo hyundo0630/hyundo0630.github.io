@@ -1,0 +1,102 @@
+---
+title : "[CentOS 7] MariaDB 10.5 Version Install"
+categories : 
+    - MariaDB
+tags :
+    - CentOS 7
+
+toc: true
+toc_sticky: true
+---
+
+
+테스트 환경<br>
+<li>OS : CentOS 7</li>
+<li>MariaDB Version : 10.5</li>
+<br>
+
+## MariaDB repository 설정
+```bash
+$ vim /etc/yum.repos.d/MariaDB.repo
+```
+```bash
+
+```
+
+## 자동 기동 되도록 설정
+```bash
+$ systemctl enable mysql
+```
+```bash
+[MariaDB]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.5/centos7-amd64
+gpdkey=https://yum.mariadb.org/PRM-GPG-KEY-MariaDB
+gpgcheck=1
+```
+```bash
+Dependencies Resolved
+
+====================================================================================================================================================
+ Package                            Arch                         Version                                Repository                             Size
+====================================================================================================================================================
+Installing:
+ remi-release                       noarch                       7.9-4.el7.remi                         /remi-release-7                        35 k
+
+Transaction Summary
+====================================================================================================================================================
+Install  1 Package
+
+Total size: 35 k
+Installed size: 35 k
+Is this ok [y/d/N]: y
+```
+
+## PHP 관련된 repository 확인
+```bash
+$ yum repolist all | grep -i 'php'
+```
+
+## 원하는 버전 enable
+```bash
+$ yum-config-manager --enable remi-php72
+```
+
+## PHP 설치
+```bash
+$ yum install php
+```
+```bash
+====================================================================================================================================================
+ Package                           Arch                          Version                                    Repository                         Size
+====================================================================================================================================================
+Installing:
+ php                               x86_64                        7.2.34-11.el7.remi                         remi-php72                        3.2 M
+Installing for dependencies:
+ libargon2                         x86_64                        20161029-3.el7                             epel                               23 k
+ php-cli                           x86_64                        7.2.34-11.el7.remi                         remi-php72                        4.8 M
+ php-common                        x86_64                        7.2.34-11.el7.remi                         remi-php72                        1.1 M
+ php-json                          x86_64                        7.2.34-11.el7.remi                         remi-php72                         69 k
+
+Transaction Summary
+====================================================================================================================================================
+Install  1 Package (+4 Dependent packages)
+
+Total download size: 9.2 M
+Installed size: 37 M
+Is this ok [y/d/N]: y
+```
+
+## PHP 버전 확인
+```bash
+$ php -v
+```
+```
+PHP 7.2.34 (cli) (built: Jun  7 2022 12:37:48) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+```
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
