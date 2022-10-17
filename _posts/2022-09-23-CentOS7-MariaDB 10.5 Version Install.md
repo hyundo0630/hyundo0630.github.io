@@ -17,85 +17,54 @@ toc_sticky: true
 
 ## MariaDB repository 설정
 ```bash
-$ vim /etc/yum.repos.d/MariaDB.repo
+curl -LsS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash -s -- --mariadb-server-version="mariadb-10.5"
 ```
-```bash
 
+## MariaDB Install
+```bash
+$ yum install mariadb-server
 ```
 
 ## 자동 기동 되도록 설정
 ```bash
-$ systemctl enable mysql
+$ systemctl enable mariadb
+$ systemctl start mariadb
 ```
+
+## MariaDB Console 접근
+
 ```bash
-[MariaDB]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.5/centos7-amd64
-gpdkey=https://yum.mariadb.org/PRM-GPG-KEY-MariaDB
-gpgcheck=1
+$ mysql -u root -p 혹은 mysql
 ```
+
+## 패스워드 변경
 ```bash
-Dependencies Resolved
-
-====================================================================================================================================================
- Package                            Arch                         Version                                Repository                             Size
-====================================================================================================================================================
-Installing:
- remi-release                       noarch                       7.9-4.el7.remi                         /remi-release-7                        35 k
-
-Transaction Summary
-====================================================================================================================================================
-Install  1 Package
-
-Total size: 35 k
-Installed size: 35 k
-Is this ok [y/d/N]: y
+$ MariaDB [none] > use mysql;
+$ MariaDB [mysql] > set password for 'root'@'localhost' = password('패스워드');
+$ MariaDB [mysql] > flush privileges;
 ```
 
-## PHP 관련된 repository 확인
+## MariaDB Console 재 접근하여 패스워드 적용 여부 확인
 ```bash
-$ yum repolist all | grep -i 'php'
+$ mysql -u root -p
+$ Enter password: ( Enter )
+$ ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+// 패스워드 변경 후 접근이 불가한 점 확인
+$ mysql -u root -p
+Enter password: ( 패스워드 입력 )
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 47
+Server version: 10.5.17-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> 
+
+접근 확인
 ```
 
-## 원하는 버전 enable
-```bash
-$ yum-config-manager --enable remi-php72
-```
-
-## PHP 설치
-```bash
-$ yum install php
-```
-```bash
-====================================================================================================================================================
- Package                           Arch                          Version                                    Repository                         Size
-====================================================================================================================================================
-Installing:
- php                               x86_64                        7.2.34-11.el7.remi                         remi-php72                        3.2 M
-Installing for dependencies:
- libargon2                         x86_64                        20161029-3.el7                             epel                               23 k
- php-cli                           x86_64                        7.2.34-11.el7.remi                         remi-php72                        4.8 M
- php-common                        x86_64                        7.2.34-11.el7.remi                         remi-php72                        1.1 M
- php-json                          x86_64                        7.2.34-11.el7.remi                         remi-php72                         69 k
-
-Transaction Summary
-====================================================================================================================================================
-Install  1 Package (+4 Dependent packages)
-
-Total download size: 9.2 M
-Installed size: 37 M
-Is this ok [y/d/N]: y
-```
-
-## PHP 버전 확인
-```bash
-$ php -v
-```
-```
-PHP 7.2.34 (cli) (built: Jun  7 2022 12:37:48) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
-```
 <br><br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
