@@ -18,91 +18,133 @@ toc_sticky: true
 ## MySQL 5.5 설치 전 확인
 ```bash
 $ rpm -qa | grep mysql*
+$ rpm -qa | grep mariadb
 ```
+
+## 확인 시 설치되어 있으면 삭제 진행
 ```bash
-
-Dependencies Resolved
-
-====================================================================================================================================================
- Package                           Arch                             Version                                    Repository                      Size
-====================================================================================================================================================
-Installing:
- mariadb                           x86_64                           1:5.5.60-1.el7_5                           base                           8.9 M
-
-Transaction Summary
-====================================================================================================================================================
-Install  1 Package
-
-Total download size: 8.9 M
-Installed size: 49 M
-Is this ok [y/d/N]: y
+$ rpm -e {rpm 명}
+$ rpm -e --nodeps {rpm 명}
 ```
+## rpm 패키지 다운로드
 
-## 자동 기동 되도록 설정
 ```bash
-$ systemctl enable mysql
+$ yum install wget // wget 없을 경우
+$ wget https://cdn.mysql.com//Downloads/MySQL-5.5/MySQL-5.5.61-2.el7.x86_64.rpm-bundle.tar
+$ tar -vxf MySQL-5.5.61-2.el7.x86_64.rpm-bundle.tar
 ```
+
+## 압축 해제
 ```bash
-Dependencies Resolved
-
-====================================================================================================================================================
- Package                            Arch                         Version                                Repository                             Size
-====================================================================================================================================================
-Installing:
- remi-release                       noarch                       7.9-4.el7.remi                         /remi-release-7                        35 k
-
-Transaction Summary
-====================================================================================================================================================
-Install  1 Package
-
-Total size: 35 k
-Installed size: 35 k
-Is this ok [y/d/N]: y
+$ tar xvf MySQL-5.5.61-2.el7.x86_64.rpm-bundle.tar
 ```
 
-## PHP 관련된 repository 확인
+## Perl 설치
 ```bash
-$ yum repolist all | grep -i 'php'
+$ yum install perl
+$ yum install perl-DBI
 ```
-
-## 원하는 버전 enable
+### Perl 이란?
 ```bash
-$ yum-config-manager --enable remi-php72
+Perl ( Practical Extranction and Report Language )
+- Perl은 C, awk, sed, sh 같은 언어들의 장점을 가지고 있다.
+- Perl 은 쉘 스크립트 (shell scripts) 언어로 컴파일러 ( Compiler ) 가 필요 없다.
+- Perl 은 문자열 처리가 어떤 언어보다도 뛰어나다.
+- Perl 은 시스템 프로그래밍에 유용하다.
+- Perl 은 여러 운영 체제를 지원한다.
 ```
 
-## PHP 설치
+## rpm 설치 진행
+```
+$ rpm -ivh rpm -ivh mysql-community-common-5.5.61-2.el7.x86_64.rpm
+$ rpm -ivh rpm -ivh mysql-community-libs-5.5.61-2.el7.x86_64.rpm
+$ rpm -ivh mysql-community-client-5.5.61-2.el7.x86_64.rpm
+$ rpm -ivh mysql-community-server-5.5.61-2.el7.x86_64.rpm
+```
+## Mysqld 기동
 ```bash
-$ yum install php
+$ systemctl enable mysqld
+$ systemctl start mysqld
 ```
+
+## MySQL Console 접근 ( 현재 패스워드 없는 상태 )
 ```bash
-====================================================================================================================================================
- Package                           Arch                          Version                                    Repository                         Size
-====================================================================================================================================================
-Installing:
- php                               x86_64                        7.2.34-11.el7.remi                         remi-php72                        3.2 M
-Installing for dependencies:
- libargon2                         x86_64                        20161029-3.el7                             epel                               23 k
- php-cli                           x86_64                        7.2.34-11.el7.remi                         remi-php72                        4.8 M
- php-common                        x86_64                        7.2.34-11.el7.remi                         remi-php72                        1.1 M
- php-json                          x86_64                        7.2.34-11.el7.remi                         remi-php72                         69 k
-
-Transaction Summary
-====================================================================================================================================================
-Install  1 Package (+4 Dependent packages)
-
-Total download size: 9.2 M
-Installed size: 37 M
-Is this ok [y/d/N]: y
+$ mysql -u root -p
 ```
 
-## PHP 버전 확인
+## MySQL 초기 패스워드 설정
 ```bash
-$ php -v
-```
-```
-PHP 7.2.34 (cli) (built: Jun  7 2022 12:37:48) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+$ mysql_serucre_installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+
+In order to log into MySQL to secure it, we'll need the current
+password for the root user.  If you've just installed MySQL, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): ( Enter )
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MySQL
+root user without the proper authorisation.
+
+Set root password? [Y/n] ( Y )
+
+New password: ( 패스워드 입력 )
+Re-enter new password: ( 동일 패스워드 입력 )
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] ( Y )
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] ( Y )
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] ( Y )
+ ... Success!
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] ( Y )
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] ( Y )
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MySQL
+installation should now be secure.
+
+Thanks for using MySQL!
+
 ```
 <br><br>
 <div style="text-align:center;">
