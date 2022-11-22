@@ -1,7 +1,7 @@
 ---
 title: "MariaDB"
 layout: archive
-permalink: /categories/MairaDB
+permalink: /categories/MariaDB
 author_profile: true
 sidebar_main: true
 ---
