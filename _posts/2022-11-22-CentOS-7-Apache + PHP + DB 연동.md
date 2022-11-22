@@ -1,5 +1,5 @@
 ---
-title : "[CentOS 7] PHP 7.2 Version InstallApache + PHP + DB 연동"
+title : "[CentOS 7] Apache + PHP + DB 연동"
 categories : 
     - PHP
 tags :
@@ -10,9 +10,9 @@ toc_sticky: true
 ---
 
 
-테스트 환경<br>
+## 테스트 환경<br>
 <li> OS : CentOS 7</li>
-<li> Apache Version : 2.4.6
+<li> Apache Version : 2.4.6</li>
 <li> PHP Version : 7.2</li>
 <li> MariaDB Version : 10.5 </li>
 <br>
