@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Apache Source Install"
 categories : 
-    - Apache
+    - Install
 tags :
     - CentOS 7
     - Apache
