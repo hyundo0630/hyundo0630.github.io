@@ -1,5 +1,5 @@
 ---
-title: "Apache"
+title: "Install"
 layout: archive
 permalink: /categories/#install
 author_profile: true
