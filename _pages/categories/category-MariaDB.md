@@ -1,5 +1,5 @@
 ---
-title: "Apache"
+title: "MariaDB"
 layout: archive
 permalink: /categories/MairaDB
 author_profile: true
