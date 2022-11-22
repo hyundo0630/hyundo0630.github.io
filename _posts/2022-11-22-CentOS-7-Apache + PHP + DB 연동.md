@@ -2,6 +2,9 @@
 title : "[CentOS 7] Apache + PHP + DB 연동"
 categories : 
     - PHP
+    - MariaDB
+    - Apache
+
 tags :
     - CentOS 7
 
@@ -68,4 +71,8 @@ $ (별도 포트 지정 시) http://{ip주소}:Port/dbcon.php
 <br>
 <div style="text-align:center;">
 <img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/7f8b7ba0c654c8a9201c3abd9836ee02bf42247a/images/Apache%2Bphp%2BMariaDB%20%EC%97%B0%EB%8F%99%20%EA%B4%80%EB%A0%A8/PHP%2BMariaDB%EC%97%B0%EB%8F%99.png">
+</div>
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
 </div>
