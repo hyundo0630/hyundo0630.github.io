@@ -21,42 +21,21 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Apache" %}
-                        <li><a href="/categories/Apache" class=""> Apache ({{category[1].size}})</a></li>
+                        <li><a href="/categories/#apache" class=""> Apache ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Tomcat" %}
-                        <li><a href="/categories/Tomcat" class="">Tomcat({{category[1].size}})</a></li>
+                    {% if category[0] == "Connect" %}
+                        <li><a href="/categories/#connect" class="">Connect({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "PHP" %}
-                        <li><a href="/categories/php" class="">PHP({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Redis" %}
-                        <li><a href="/categories/Redis" class="">Redis({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "MySQL" %}
-                        <li><a href="/categories/MySQL" class="">MySQL({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "MariaDB" %}
-                        <li><a href="/categories/MariaDB" class="">MariaDB({{category[1].size}})</a></li>
+                    {% if category[0] == "Install" %}
+                        <li><a href="/categories/#install" class="">Install({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

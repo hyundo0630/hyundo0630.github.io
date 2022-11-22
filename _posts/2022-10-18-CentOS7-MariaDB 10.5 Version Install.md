@@ -1,9 +1,10 @@
 ---
 title : "[CentOS 7] MariaDB 10.5 Version Install"
 categories : 
-    - MariaDB
+    - Install
 tags :
     - CentOS 7
+    - MariaDB
 
 toc: true
 toc_sticky: true

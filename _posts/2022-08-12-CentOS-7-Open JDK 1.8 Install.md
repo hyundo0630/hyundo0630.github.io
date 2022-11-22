@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Open JDK 1.8 Install"
 categories : 
-    - Tomcat
+    - Install
 tags :
     - CentOS 7
     - Open JDK

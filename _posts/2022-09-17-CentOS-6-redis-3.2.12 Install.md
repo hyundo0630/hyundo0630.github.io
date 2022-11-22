@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 6] Redis 설치"
 categories : 
-    - Redis
+    - Install
 tags :
     - CentOS 6
 

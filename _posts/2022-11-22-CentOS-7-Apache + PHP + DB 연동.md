@@ -1,9 +1,7 @@
 ---
 title : "[CentOS 7] Apache + PHP + DB 연동"
 categories : 
-    - PHP
-    - MariaDB
-    - Apache
+    - Connect
 
 tags :
     - CentOS 7

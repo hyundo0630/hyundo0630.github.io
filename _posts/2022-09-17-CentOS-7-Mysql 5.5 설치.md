@@ -1,9 +1,10 @@
 ---
 title : "[CentOS 7] MySQL 5.5 설치"
 categories : 
-    - MySQL
+    - Install
 tags :
     - CentOS 7
+    - MySQL
 
 toc: true
 toc_sticky: true

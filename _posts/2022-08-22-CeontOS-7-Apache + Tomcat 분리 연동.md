@@ -1,8 +1,7 @@
 ---
 title : "[CentOS 7] Apache + Tomcat 분리 연동"
 categories : 
-    - Apache
-    - Tomcat
+    - Connect
 tags :
     - CentOS 7
     - Tomcat

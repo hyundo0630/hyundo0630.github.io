@@ -1,9 +1,10 @@
 ---
 title : "[CentOS 7] Redis-Server 설치"
 categories : 
-    - Redis
+    - Install
 tags :
     - CentOS 7
+    - Redis
 
 toc: true
 toc_sticky: true

@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Apache + PHP 연동"
 categories : 
-    - Apache
+    - Connect
 tags :
     - CentOS 7
     - Apache

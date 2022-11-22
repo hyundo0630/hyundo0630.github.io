@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Tomcat 8.5 Install"
 categories : 
-    - Tomcat
+    - Install
 tags :
     - CentOS 7
     - Tomcat
