@@ -57,3 +57,15 @@ $ vim dbcon.php
     mysql_close($conn);
 ?>
 ```
+
+## 연동 확인
+<li>웹 브라우저 주소창에 아래와 같이 입력</li>
+
+```bash
+$ http://{ip주소}/dbcon.php
+$ (별도 포트 지정 시) http://{ip주소}:Port/dbcon.php
+```
+<br>
+<div style="text-align:center;">
+<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/7f8b7ba0c654c8a9201c3abd9836ee02bf42247a/images/Apache%2Bphp%2BMariaDB%20%EC%97%B0%EB%8F%99%20%EA%B4%80%EB%A0%A8/PHP%2BMariaDB%EC%97%B0%EB%8F%99.png">
+</div>
