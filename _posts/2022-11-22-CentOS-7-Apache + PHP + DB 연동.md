@@ -7,6 +7,9 @@ categories :
 
 tags :
     - CentOS 7
+    - PHP
+    - MariaDB
+    - Apache
 
 toc: true
 toc_sticky: true
