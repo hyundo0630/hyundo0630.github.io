@@ -1,7 +1,7 @@
 ---
 title: "Install"
 layout: archive
-permalink: /categories/#install
+permalink: /categories/install
 author_profile: true
 sidebar_main: true
 ---

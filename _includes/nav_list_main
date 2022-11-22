@@ -35,7 +35,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Install" %}
-                        <li><a href="/categories/#install" class="">install({{category[1].size}})</a></li>
+                        <li><a href="/categories/install" class="">install({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
