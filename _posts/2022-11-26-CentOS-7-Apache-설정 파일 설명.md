@@ -215,8 +215,7 @@ Group apach
 </Directory>
 ```
 <li> Directory /var/www/html 보다 상위의 /var/www/ 접근 권한을 denied 로 주었지만,<br>
-　 /var/www/html 경로를 지정하여 granted ( 접근허용 ) 권한을 주게 되면 /var/www/html 경로 접근이
-   가능하다.</li>
+/var/www/html 경로를 지정하여 granted ( 접근허용 ) 권한을 주게 되면 /var/www/html 경로 접근이 가능하다.</li>
 
 ### Option
 <li>FollowSymLinks : 심볼릭 링크를 허용한다.</li>
@@ -271,4 +270,5 @@ ErrorLog "logs/error_log"
 #
 LogLevel warn
 ```
-
+<li>ErrorLog "경로/파일명"</li>
+<ul>경로 앞단에 "/" 붙이지 않을 경우 ServerRoot/경로/파일명 으로 생성된다.</ul>
