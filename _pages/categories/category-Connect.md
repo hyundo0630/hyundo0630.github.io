@@ -1,11 +1,11 @@
 ---
-title: "MariaDB"
+title: "Connect"
 layout: archive
-permalink: /categories/MariaDB
+permalink: /categories/connect
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.MariaDB %}
+{% assign posts = site.categories.connect %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
