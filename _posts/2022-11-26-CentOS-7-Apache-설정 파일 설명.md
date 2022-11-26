@@ -10,8 +10,6 @@ toc : true
 toc_sticky : true
 ---
 
-# [CentOS 7] Apache httpd.conf 설정 파일 설명
-
 ## 테스트 환경
 <li>OS : CentOS 7</li>
 <li>Apache Version : 2.4.6</li>
@@ -65,7 +63,7 @@ ServerRoot "/etc/httpd"
 
 ```
 <li> ServerRoot "/etc/httpd"</li>
-- Apache 각종 설정에서 절대 경로가 아닌, 상대 경로로 작성되면 ServerRoot 에 지정된 디렉토리로부터의 상대 경로이다.
+▶ Apache 각종 설정에서 절대 경로가 아닌, 상대 경로로 작성되면 ServerRoot 에 지정된 디렉토리로부터의 상대 경로이다.
 <br><br>
 
 
@@ -84,7 +82,7 @@ ServerRoot "/etc/httpd"
 Listen 80
 ```
 <li> Listen 80</li>
-- Apache 접근 할 포트를 지정한다. ( Default Port : 80 )<br>
+<ol>Apache 접근 할 포트를 지정한다. ( Default Port : 80 )<ol>
 - 기본 포트 변경도 가능하며, 여러 포트를 동시에 설정하여 다중 포트로도 접근이 가능하다.<br>
 　(예시)
 
