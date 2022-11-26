@@ -29,8 +29,6 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 
 ## httpd.conf 설명
 
-#
-
 ## [ 서버 위치 디렉토리 ]
 ```bash
 #
@@ -67,10 +65,9 @@ ServerRoot "/etc/httpd"
 
 ```
 <li> ServerRoot "/etc/httpd"</li>
-　　- Apache 각종 설정에서 절대 경로가 아닌, 상대 경로로 작성되면 ServerRoot 에 지정된 디렉토리로부터의 상대 경로이다.
+- Apache 각종 설정에서 절대 경로가 아닌, 상대 경로로 작성되면 ServerRoot 에 지정된 디렉토리로부터의 상대 경로이다.
 <br><br>
 
-#
 
 ## [ Port ]
 
@@ -87,8 +84,8 @@ ServerRoot "/etc/httpd"
 Listen 80
 ```
 <li> Listen 80</li>
-　　- Apache 접근 할 포트를 지정한다. ( Default Port : 80 )<p>
-　　- 기본 포트 변경도 가능하며, 여러 포트를 동시에 설정하여 다중 포트로도 접근이 가능하다.<p>
+- Apache 접근 할 포트를 지정한다. ( Default Port : 80 )<br>
+- 기본 포트 변경도 가능하며, 여러 포트를 동시에 설정하여 다중 포트로도 접근이 가능하다.<br>
 　(예시)
 
 ```bash
@@ -96,7 +93,6 @@ Listen 80
 Listen 8080
 ```
 
-#
 
 ## [ Include ]
 ```bash
@@ -116,10 +112,8 @@ Include conf.modules.d/*.conf
 ```
 
 <li>Include 파일 이름</li>
-　　- Include 는 다른 설정파일을 포함 시킬 때 사용한다.<p>
-　　- 파일 이름은 절대 경로로 지정하거나, "ServerRoot" 에 대한 상대 경로로 지정한다.
-
-#
+- Include 는 다른 설정파일을 포함 시킬 때 사용한다.<br>
+- 파일 이름은 절대 경로로 지정하거나, "ServerRoot" 에 대한 상대 경로로 지정한다.<br>
 
 ## User/Group 권한
 ```bash
@@ -134,10 +128,8 @@ Include conf.modules.d/*.conf
 User apache
 Group apache
 ```
-<li>User apache<p>　 Group apache</li>
-　　- apache Service 를 실행하는 유저를 설정한다.
-
-#
+<li>User apache<br>　 Group apache</li>
+- apache Service 를 실행하는 유저를 설정한다.<br>
 
 ## [ Server Name ]
 ```bash
@@ -151,9 +143,7 @@ Group apache
 #ServerName www.example.com:80
 ```
 <li>ServerName {도메인명}:{포트}</li>
-　　- 현재는 로컬이여서 주석 처리 되어있으나, 실 서비스중인 경우 도메인명과 서비스 포트를 등록해주면 된다.
-
-#
+　　- 현재는 로컬이여서 주석 처리 되어있으나, 실 서비스중인 경우 도메인명과 서비스 포트를 등록해주면 된다.<br>
 
 ## [ Directory ]
 ```bash
@@ -174,7 +164,8 @@ Group apache
 
 ### AllowOverride
 <li>AllowOverride는 클라이언트의 디렉토리 접근 제어에 관한 설정이다.</li>
-<li>AllowOverride는 AccessFileName 지시자와 밀접한 관계를 가지고 있다.<p>　 ( 아래 각 설정 값들은 AccessFileName 지시자에서 설정한 파일에 적용한다. )</li>
+<li>AllowOverride는 AccessFileName 지시자와 밀접한 관계를 가지고 있다.</li><br>
+( 아래 각 설정 값들은 AccessFileName 지시자에서 설정한 파일에 적용한다. )<br>
 　　ㅇ None : AllowOverride 를 off<p>
 　　ㅇ All : AccessFileName 지시자로 설정한 파일에 대해 민감하게 반응한다.<p>
 　　ㅇ On : AllowOverride 를 On
@@ -227,9 +218,9 @@ Group apache
     Require all granted
 </Directory>
 ```
-<li> Directory /var/www/html 보다 상위의 /var/www/ 접근 권한을 denied 로 주었지만,<p> 
-　 /var/www/html 경로를 지정하여 granted ( 접근허용 ) 권한을 주게 되면 /var/www/html 경로 접근이 
-   가능하다.
+<li> Directory /var/www/html 보다 상위의 /var/www/ 접근 권한을 denied 로 주었지만,<br>
+　 /var/www/html 경로를 지정하여 granted ( 접근허용 ) 권한을 주게 되면 /var/www/html 경로 접근이
+   가능하다.</li>
 
 ### Option
 <li>FollowSymLinks : 심볼릭 링크를 허용한다.</li>
@@ -238,8 +229,6 @@ Group apache
 <li>Indexes : 웹 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우<p>　　　　　　디렉토리 안의 파일 목록을 보여준다.</li>
 <li>None : 모든 설정을 부정한다.</li><br>
 
-
-#
 
 ## Document Root
 
@@ -252,10 +241,8 @@ Group apache
 DocumentRoot "/var/www/html"
 ```
 <li>DocumetRoot</li>
-　 - Apache 는 WWW 서버이기에 클라이언트에서 콘텐츠 요청에 대응하는 콘텐츠를 반환한다.<p>
-　 - 그 콘텐츠들을 배치해두는 위치를 DocumentRoot 로 지정한다.
-
-#
+- Apache 는 WWW 서버이기에 클라이언트에서 콘텐츠 요청에 대응하는 콘텐츠를 반환한다.<br>
+- 그 콘텐츠들을 배치해두는 위치를 DocumentRoot 로 지정한다.<br>
 
 ## [ Directory Index ]
 
@@ -268,9 +255,7 @@ DocumentRoot "/var/www/html"
     DirectoryIndex index.html
 </IfModule>
 ```
-<li>DirecryIndex [지정 파일] : DocumentRoot 경로 내 지정 파일을 자동으로 불러온다. </li>
-
-#
+<li>DirecryIndex [지정 파일] : DocumentRoot 경로 내 지정 파일을 자동으로 불러온다. </li><br>
 
 ## [ ErrorLog ]
 ```bash
