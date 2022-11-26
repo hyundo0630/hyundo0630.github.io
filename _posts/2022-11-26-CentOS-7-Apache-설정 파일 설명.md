@@ -162,9 +162,9 @@ Group apach
 <li>AllowOverride는 클라이언트의 디렉토리 접근 제어에 관한 설정이다.</li>
 <li>AllowOverride는 AccessFileName 지시자와 밀접한 관계를 가지고 있다.</li><br>
 ( 아래 각 설정 값들은 AccessFileName 지시자에서 설정한 파일에 적용한다. )<br>
-　　ㅇ None : AllowOverride 를 off<p>
-　　ㅇ All : AccessFileName 지시자로 설정한 파일에 대해 민감하게 반응한다.<p>
-　　ㅇ On : AllowOverride 를 On
+　　ㅇ None : AllowOverride 를 off<br>
+　　ㅇ All : AccessFileName 지시자로 설정한 파일에 대해 민감하게 반응한다.<br>
+　　ㅇ On : AllowOverride 를 On<br>
 
 ```bash
 # Relax access to content within /var/www.
