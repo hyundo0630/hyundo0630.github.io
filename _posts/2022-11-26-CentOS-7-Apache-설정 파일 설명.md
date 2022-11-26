@@ -82,15 +82,14 @@ ServerRoot "/etc/httpd"
 Listen 80
 ```
 <li> Listen 80</li>
-<ol>Apache 접근 할 포트를 지정한다. ( Default Port : 80 )<ol>
-- 기본 포트 변경도 가능하며, 여러 포트를 동시에 설정하여 다중 포트로도 접근이 가능하다.<br>
-　(예시)
+▶ Apache 접근 할 포트를 지정한다. ( Default Port : 80 )<br>
+▶기본 포트 변경도 가능하며, 여러 포트를 동시에 설정하여 다중 포트로도 접근이 가능하다.<br>
+(예시)
 
 ```bash
 Listen 80
 Listen 8080
 ```
-
 
 ## [ Include ]
 ```bash
@@ -110,8 +109,8 @@ Include conf.modules.d/*.conf
 ```
 
 <li>Include 파일 이름</li>
-- Include 는 다른 설정파일을 포함 시킬 때 사용한다.<br>
-- 파일 이름은 절대 경로로 지정하거나, "ServerRoot" 에 대한 상대 경로로 지정한다.<br>
+▶ Include 는 다른 설정파일을 포함 시킬 때 사용한다.<br>
+▶ 파일 이름은 절대 경로로 지정하거나, "ServerRoot" 에 대한 상대 경로로 지정한다.<br>
 
 ## User/Group 권한
 ```bash
@@ -124,10 +123,11 @@ Include conf.modules.d/*.conf
 # running httpd, as with most system services.
 #
 User apache
-Group apache
+Group apach
 ```
-<li>User apache<br>　 Group apache</li>
-- apache Service 를 실행하는 유저를 설정한다.<br>
+<li>User apache</li>
+<li>Group apache</li>
+▶apache Service 를 실행하는 유저를 설정한다.<br>
 
 ## [ Server Name ]
 ```bash
@@ -141,7 +141,7 @@ Group apache
 #ServerName www.example.com:80
 ```
 <li>ServerName {도메인명}:{포트}</li>
-　　- 현재는 로컬이여서 주석 처리 되어있으나, 실 서비스중인 경우 도메인명과 서비스 포트를 등록해주면 된다.<br>
+▶현재는 로컬이여서 주석 처리 되어있으나, 실 서비스중인 경우 도메인명과 서비스 포트를 등록해주면 된다.<br>
 
 ## [ Directory ]
 ```bash
@@ -157,8 +157,6 @@ Group apache
 ```
 <li>Directory {path}</li>
 <br>
-
-
 
 ### AllowOverride
 <li>AllowOverride는 클라이언트의 디렉토리 접근 제어에 관한 설정이다.</li>
@@ -223,8 +221,8 @@ Group apache
 ### Option
 <li>FollowSymLinks : 심볼릭 링크를 허용한다.</li>
 <li>Includes : SSI 을 허용한다</li>
-<li>MultiViews : 클라이언트 요청에 따라 적절하게 페이지를 보여준다. 쉽게 생각하면 HTTP 헤드 정보가<p>　　　　　　　Accept-Language:ko 라면 Korea 언어에 맞게 데이터를 클라이언트에 전송한다.</li>
-<li>Indexes : 웹 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우<p>　　　　　　디렉토리 안의 파일 목록을 보여준다.</li>
+<li>MultiViews : 클라이언트 요청에 따라 적절하게 페이지를 보여준다. 쉽게 생각하면 HTTP 헤드 정보가<br>Accept-Language:ko 라면 Korea 언어에 맞게 데이터를 클라이언트에 전송한다.</li>
+<li>Indexes : 웹 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우<br>디렉토리 안의 파일 목록을 보여준다.</li>
 <li>None : 모든 설정을 부정한다.</li><br>
 
 
@@ -239,8 +237,8 @@ Group apache
 DocumentRoot "/var/www/html"
 ```
 <li>DocumetRoot</li>
-- Apache 는 WWW 서버이기에 클라이언트에서 콘텐츠 요청에 대응하는 콘텐츠를 반환한다.<br>
-- 그 콘텐츠들을 배치해두는 위치를 DocumentRoot 로 지정한다.<br>
+▶Apache 는 WWW 서버이기에 클라이언트에서 콘텐츠 요청에 대응하는 콘텐츠를 반환한다.<br>
+▶그 콘텐츠들을 배치해두는 위치를 DocumentRoot 로 지정한다.<br>
 
 ## [ Directory Index ]
 
