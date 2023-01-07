@@ -1,7 +1,7 @@
 ---
 title : "[CentOS7] Apache httpd.conf 설정 파일 설명"
 categories :
-    - Apache
+    - Apache_config
 tages :
     - CentOS 7
     - Apache
