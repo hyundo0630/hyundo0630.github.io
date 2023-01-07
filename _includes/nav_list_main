@@ -27,6 +27,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Apache_config" %}
+                        <li><a href="/categories/config" class=""> Connect ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Connect" %}
                         <li><a href="/categories/connect" class=""> Connect ({{category[1].size}})</a></li>
                     {% endif %}
