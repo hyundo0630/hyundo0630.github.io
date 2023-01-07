@@ -55,7 +55,8 @@ total 0
 ```
 
 <li> /var/www/html 경로에 파일이 없을 때 웹페이지 접근 </li>
-
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Document%20Root%20%EA%B4%80%EB%A0%A8/Document%20Root%20%EB%82%B4%20%EC%95%84%EB%AC%B4%EA%B2%83%EB%8F%84%20%EC%97%86%EC%9D%84%20%EB%95%8C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+<li> 테스트 페이지가 출력 되는 것을 확인할 수 있다. </li>
 <br>
 
 ### html 파일 추가
@@ -66,3 +67,11 @@ $ :wq
 ```
 
 ### html 파일 추가 후 웹페이지 접근
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Document%20Root%20%EA%B4%80%EB%A0%A8/Document%20Root%20%EB%82%B4%20%ED%8C%8C%EC%9D%BC%EC%9D%B4%20%EC%9E%88%EC%9D%84%20%EB%95%8C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+<li> 편집기에서 작성한 index.html 내 안녕하세요 문구가 출력 되는 것을 확인할 수 있다 </li>
+
+<li> 즉, Document ROOT 는 /var/www/html 임을 알 수 있다. </li>
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
