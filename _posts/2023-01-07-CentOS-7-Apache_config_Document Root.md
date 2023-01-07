@@ -54,4 +54,15 @@ $ ls -l
 total 0
 ```
 
-<li> /var/www/html 경로에 파일이 없을 때 웹페이지 접근
+<li> /var/www/html 경로에 파일이 없을 때 웹페이지 접근 </li>
+
+<br>
+
+### html 파일 추가
+```bash
+$ vi /var/www/html/index.html (편집기 접근)
+$ 안녕하세요
+$ :wq
+```
+
+### html 파일 추가 후 웹페이지 접근
