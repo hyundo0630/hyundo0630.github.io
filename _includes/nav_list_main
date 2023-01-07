@@ -28,7 +28,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Apache_config" %}
-                        <li><a href="/categories/config" class=""> Connect ({{category[1].size}})</a></li>
+                        <li><a href="/categories/config" class=""> Apache_config ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
