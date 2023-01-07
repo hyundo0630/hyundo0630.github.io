@@ -40,3 +40,18 @@ DocumentRoot "/var/www/html"
 <li>DocumetRoot</li>
 ▶Apache 는 WWW 서버이기에 클라이언트에서 콘텐츠 요청에 대응하는 콘텐츠를 반환한다.<br>
 ▶그 콘텐츠들을 배치해두는 위치를 DocumentRoot 로 지정한다.<br>
+<br>
+
+### Document ROOT 확인
+
+<li> httpd.conf 에 지정된 Document Root 경로 </li><br>
+
+```bash
+$ cd /var/www/html
+$ pwd
+/var/www/html
+$ ls -l
+total 0
+```
+
+<li> /var/www/html 경로에 파일이 없을 때 웹페이지 접근
