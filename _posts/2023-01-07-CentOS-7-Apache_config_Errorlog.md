@@ -47,3 +47,19 @@ LogLevel warn
 ```
 <li>ErrorLog "경로/파일명"</li>
 <ul>경로 앞단에 "/" 붙이지 않을 경우 ServerRoot/경로/파일명 으로 생성된다.</ul>
+
+### [ 확인 ]
+
+<li> ErrorLog 경로 확인</li>
+
+```bash
+$ 상위와 같은 설정일 경우
+$ cd /etc/httpd/logs
+$ ls -l
+total 16
+-rw-r--r-- 1 root root 4368 Jan  7 18:04 access_log
+-rw-r--r-- 1 root root  992 Jan  7 16:45 error_log
+-rw-r--r-- 1 root root    0 Jan  7 16:45 ssl_access_log
+-rw-r--r-- 1 root root  348 Jan  7 16:45 ssl_error_log
+-rw-r--r-- 1 root root    0 Jan  7 16:45 ssl_request_log
+```
