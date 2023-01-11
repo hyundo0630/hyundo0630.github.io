@@ -171,5 +171,14 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 <li>/var/www/html _ Require all granted 상태에서 웹페이지 접근 </li>
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
 <li> 정상 접근 가능</li>
+<br>
+[ /var/www/html _ Require all denied 상태에서 웹페이지 접근 ]
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/denied%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+<li>접근 불가능</li>
+<br>
+▶ 명시된 디렉토리의 절대경로의 단위로 퍼미션 권한이 주어진다는 것을 알 수 있다.
 
-<li>/var/www/html _ Require all denied 상태에서 웹페이지 접근</li>
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
