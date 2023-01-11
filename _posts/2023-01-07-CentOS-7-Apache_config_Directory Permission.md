@@ -117,6 +117,59 @@ $ vim {apache 설치 경로}/conf/httpd.conf
     Require all granted
 </Directory>
 ```
-Require all granted 웹 페이지 접근
+<li>Require all granted 상태에서 웹 페이지 접근</li>
 
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+<li> 정상 접근 가능</li>
+<br>
 
+```bash
+<Directory "/var/www">
+    AllowOverride None
+    # Allow open access:
+    Require all denied
+</Directory>
+```
+
+<li>Require all denied 상태에서 웹 페이지 접근</li>
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+<li> 정상 접근 가능</li>
+
+▶ /var/www 경로의 권한은 /var/www/html 상위에 존재하나, 연관성은 없다.
+
+```bash
+<Directory "/var/www/html">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options Indexes FollowSymLinks
+
+    #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    AllowOverride None
+
+    #
+    # Controls who can get stuff from this server.
+    #
+    Require all granted
+</Directory>
+```
+
+<li>/var/www/html _ Require all granted 상태에서 웹페이지 접근 </li>
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+<li> 정상 접근 가능</li>
+
+<li>/var/www/html _ Require all denied 상태에서 웹페이지 접근</li>
