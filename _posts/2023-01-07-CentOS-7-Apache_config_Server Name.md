@@ -40,3 +40,8 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 ```
 <li>ServerName {도메인명}:{포트}</li>
 ▶현재는 로컬이여서 주석 처리 되어있으나, 실 서비스중인 경우 도메인명과 서비스 포트를 등록해주면 된다.<br>
+
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
