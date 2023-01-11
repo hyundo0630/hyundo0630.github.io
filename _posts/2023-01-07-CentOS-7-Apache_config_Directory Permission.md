@@ -107,3 +107,16 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 <li>MultiViews : 클라이언트 요청에 따라 적절하게 페이지를 보여준다. 쉽게 생각하면 HTTP 헤드 정보가<br>Accept-Language:ko 라면 Korea 언어에 맞게 데이터를 클라이언트에 전송한다.</li>
 <li>Indexes : 웹 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우<br>디렉토리 안의 파일 목록을 보여준다.</li>
 <li>None : 모든 설정을 부정한다.</li><br>
+
+### [ 확인 ]
+
+```bash
+<Directory "/var/www">
+    AllowOverride None
+    # Allow open access:
+    Require all granted
+</Directory>
+```
+Require all granted 웹 페이지 접근
+
+
