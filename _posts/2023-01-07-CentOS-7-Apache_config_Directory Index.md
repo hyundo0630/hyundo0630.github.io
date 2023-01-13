@@ -76,6 +76,9 @@ $ systemctl restart httpd
 ```bash
 $ 서버 IP or 도메인 접근
 ```
+<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/d6072ec5251d52d34eefb92af4ce7c2eb8f9f047/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Index%20%EA%B4%80%EB%A0%A8/DirectoryIndex%20%EC%A0%9C%EA%B1%B0.png">
+<br>
+<li>테스트 페이지가 출력되는 부분을 확인할 수 있다.</li><br>
 
 ### DirectoryIndex 추가
 ```bash
@@ -100,3 +103,28 @@ $ :wq
 ```
 
 [ 웹 사이트 접근 ]
+<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/d6072ec5251d52d34eefb92af4ce7c2eb8f9f047/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Index%20%EA%B4%80%EB%A0%A8/DirectoryIndex%20%EC%B6%94%EA%B0%80.png">
+
+### DirectoryIndex 여러 개 추가
+```bash
+#
+# DirectoryIndex: sets the file that Apache will serve if a directory
+# is requested.
+#
+<IfModule dir_module>
+    DirectoryIndex index.html test.html
+</IfModule>
+```
+```bash
+$ systemctl restart httpd
+```
+```bash
+vi /var/www/html/test.html
+```
+```bash
+$ i (Insert) // 편집기 삽입
+$ DirectoryIndex two Success !!
+$ :wq
+```
+
+[ 웹사이트 접근 ]
