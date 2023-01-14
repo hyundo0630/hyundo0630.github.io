@@ -80,7 +80,7 @@ $ make && make install
 ```
 
 ### apr,apr-util 디렉토리 httpd 디렉토리로 이동 후 컴파일 설치 진행
-```
+```bash
 $ mv /usr/local/apr-1.7.0 /usr/local/httpd-2.4.54/srclib/apr
 $ mv /usr/local/apr-util-1.6.1 /usr/local/httpd-2.4.54/srclib/apr-util
 $ cd /usr/local/httpd-2.4.54
@@ -90,3 +90,46 @@ $ ./configure --prefix=/usr/local/httpd \
 --with-included-apr \
 --with-mpm-shared=all
 $ make && make install
+```
+
+## systemctl 등록
+```bash
+$ vim /etc/systemd/system/httpd.service
+$ vim /etc/systemd/system/httpd.service
+[Unit]
+Description=The Apache HTTP Server
+
+[Service]
+Type=forking
+#EnvironmentFile=/usr/local/httpd/bin/envvars
+PIDFile=/usr/local/httpd/logs/httpd.pid
+ExecStart=/usr/local/httpd/bin/apachectl start
+ExecReload=/usr/local/httpd/bin/apachectl graceful
+ExecStop=/usr/local/apacher2/bin/apachectl stop
+KillSignal=SIGCONT
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+## 아파치 실행
+```bash
+$ systemctl enable httpd
+$ systemctl start httpd
+```
+```bash
+$ netstat -tnlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/systemd           
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      4158/sshd           
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      4772/master         
+tcp6       0      0 :::111                  :::*                    LISTEN      1/systemd           
+tcp6       0      0 :::80                   :::*                    LISTEN      31269/httpd         
+tcp6       0      0 :::22                   :::*                    LISTEN      4158/sshd           
+tcp6       0      0 ::1:25                  :::*                    LISTEN      4772/master  
+```
+<li>80 Port 올라오면 성공</li><br>
+
+## 웹 페이지 접근 확인
