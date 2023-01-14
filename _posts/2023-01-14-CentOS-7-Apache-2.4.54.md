@@ -113,6 +113,11 @@ PrivateTmp=true
 WantedBy=multi-user.target
 ```
 
+### 재기동
+```bash
+$ systemctl daemon-reload
+```
+
 ## 아파치 실행
 ```bash
 $ systemctl enable httpd
@@ -133,3 +138,9 @@ tcp6       0      0 ::1:25                  :::*                    LISTEN      
 <li>80 Port 올라오면 성공</li><br>
 
 ## 웹 페이지 접근 확인
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/20230114_143525.png?raw=true">
+
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
