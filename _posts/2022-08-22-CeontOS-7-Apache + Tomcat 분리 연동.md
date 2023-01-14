@@ -216,7 +216,7 @@ $ http://공인 IP/index.jsp
 ```
 
 <div style="text-align:center;">
-<img src="https://raw.githubusercontent.com/hyundo0630/hyundo0630.github.io/62e0c0515902554bd0fb040cc1618d3406fc0e01/images/Apache%20%2B%20Tomcat%20%EA%B4%80%EB%A0%A8/Apache%20%2B%20Tomcat%20%EC%97%B0%EB%8F%99%20Page.png">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20+%20Tomcat%20%EA%B4%80%EB%A0%A8/20230114_160730.png?raw=true">
 </div>
 
 <div style="text-align:center;">
