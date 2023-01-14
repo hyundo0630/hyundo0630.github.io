@@ -75,7 +75,7 @@ $ vi /etc/profile
 ```bash
 // 맨 하단에 입력
 JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el7_9.x86_64
-CATALINA_HOME=/usr/local/Tomcat9.0.70
+CATALINA_HOME=/usr/local/Tomcat9
 CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar:$CATALINA_HOME/lib-jsp-api.jar:$CATALINA_HOME/lib/servlet-api.jar
 PATH=$PATH:$JAVA_HOME/bin:/bin:/sbin
 export JAVA_HOME PATH CLASSPATH CATALINA_HOME
