@@ -19,7 +19,7 @@ toc_sticky: true
 <li> Open JDK Version : 1.8.0 </li>
 <br>
 open JDK 1.8 설치가 안되신 분들은 아래 URL 을 통해 진행 해주시면 됩니다.<br>
-<li> URL : <a href="https://hyundo0630.github.io/tomcat/CentOS-7-Open-JDK-1.8-Install/"> Open JDK 1.8 Install</a></li>
+<li> URL : <a href="https://hyundo0630.github.io/install/CentOS-7-Open-JDK-1.8-Install/"> Open JDK 1.8 Install</a></li>
 </div>
 
 ## Open JDK 설치 확인
