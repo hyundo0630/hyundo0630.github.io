@@ -37,7 +37,7 @@ OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
 ```bash
 $ mkdir -p /home/tomcat9.0.70
 $ cd /home/tomcat9.0.70
-$ wget wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
+$ wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
 
 $ ll
 -rw-r--r-- 1 root root 11613418 Dec  1 23:20 apache-tomcat-9.0.70.tar.gz
