@@ -56,12 +56,12 @@ $ mv apache-tomcat-9.0.71 /usr/local/Tomcat9
 $ cd /usr/local/Tomcat9/conf
 $ vim server.xml
 
-// 아래 구문 주석 해제
+// 아래 구문 주석 해제 및 secretRequired 추가
     <Connector protocol="AJP/1.3"
-               address="0.0.0.0" --> 0.0.0.0 으로 변경 
+               address="0.0.0.0"
                port="8009"
-               redirectPort="8443" />
-
+               redirectPort="8443" 
+               secretRequired="false" />
 $ :wq
 ```
 
@@ -124,18 +124,19 @@ localhost:8080
 ## systemctl 등록
 ```bash
 $ vim /etc/systemd/system/httpd.service
-[Unit]
-Description=The Apache HTTP Server
+[UNIT]
+Description=tomcat
+After=syslog.target network.target
 
 [Service]
 Type=forking
-#EnvironmentFile=/usr/local/httpd/bin/envvars
-PIDFile=/usr/local/httpd/logs/httpd.pid
-ExecStart=/usr/local/httpd/bin/apachectl start
-ExecReload=/usr/local/httpd/bin/apachectl graceful
-ExecStop=/usr/local/apacher2/bin/apachectl stop
-KillSignal=SIGCONT
-PrivateTmp=true
+
+Environment=/usr/local/Tomcat9
+ExecStart=/usr/local/Tomcat9/bin/startup.sh
+ExecStop=/usr/local/Tomcat9/bin/shutdown.sh
+
+User=root
+Group=root
 
 [Install]
 WantedBy=multi-user.target
