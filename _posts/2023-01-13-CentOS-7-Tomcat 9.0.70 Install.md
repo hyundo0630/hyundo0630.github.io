@@ -141,6 +141,10 @@ Group=root
 [Install]
 WantedBy=multi-user.target
 ```
+### 재기동
+```bash
+$ systemctl daemon-reload
+```
 
 <br><br>
 <div style="text-align:center;">
