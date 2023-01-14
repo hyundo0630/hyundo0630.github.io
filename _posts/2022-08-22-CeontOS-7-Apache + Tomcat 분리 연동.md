@@ -100,19 +100,20 @@ Saving to: ‘tomcat-connectors-1.2.48-src.tar.gz’
 ### 압축 해제
 ```bash
 $ tar xvf tomcat-connectors-1.2.48-src.tar.gz
-$ mv tomcat-connectors-1.2.48-src/ /usr/bin/src
-$ cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
+$ cd /home/connector/tomcat-connectors-1.2.48-src/native/
 ```
 
 ### 컴파일 진행
 ```bash
-$ ./configure --with-apxs=/usr/local/apxs
+$ find / -name apxs
+$ /usr/local/httpd/bin/apxs
+$ ./configure --with-apxs=/usr/local/httpd/bin/apxs
 $ make && make install
 ```
 
 ### mod_jk 설치 확인
 ```bash
-$ ll /etc/httpd/modules/ | grep mod_jk
+$ ll /usr/local/httpd/modules/ | grep mod_jk
 -rwxr-xr-x 1 root root 1565864 Dec 22 03:29 mod_jk.so
 ```
 
@@ -120,62 +121,77 @@ $ ll /etc/httpd/modules/ | grep mod_jk
 <li> httpd.conf 내 LoadModule 추가 </li>
 
 ```bash
-$ vim /etc/httpd/conf/httpd.conf // 본인 apache conf 경로 입력
+$ vim /usr/local/httpd/conf/httpd.conf // 본인 apache conf 경로 입력
 ```
 
 ```bash
 // 아래 구문 추가
 $ LoadModule jk_module modules/mod_jk.so
-$ Include conf.d/*.conf
+$ Include conf/extra/mod_jk.conf
 ```
 
 ### Mod_jk.conf 파일 생성
 ```bash
-$ vim /etc/httpd/conf.d/httpd-vhost.conf
-$ vim /etc/httpd/conf.d/mod_jk.conf
+$ vim /usr/local/httpd/conf/extra/mod_jk.conf
 ```
 ```bash
 // 아래 구문 추가
 <IfModule jk_module>
- JkWorkersFile conf/workers.properties
- JkShmFile /etc/httpd/logs/mod_jk.shm
- JkLogFile /etc/httpd/logs/mod_jk.log
+ JkWorkersFile conf/extra/workers.properties
+ JkShmFile /usr/local/httpd/logs/mod_jk.shm
+ JkLogFile /usr/local/httpd/logs/mod_jk.log
  JkLogLevel info
  JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
 </IfModule>
 ```
 ### httpd-vhost.conf 파일 생성
 ```bash
+$ vim /usr/local/httpd/conf/httpd.conf
+$ :set nu
+$ 491 번라인 Include conf/extra/httpd-vhosts.conf 주석 해제
+$ :wq
+$ vim /usr/local/httpd/conf/extra/httpd-vhosts.conf
+```
+```bash
 <VirtualHost *:80>
     ServerName localhost
-    DocumentRoot /home/bhd/www
+    DocumentRoot /var/www/test
 
-    CustomLog "logs/bhd.access_log" combined
-    ErrorLog  "logs/bhd.error_log"
+    CustomLog "logs/test.access_log" combined
+    ErrorLog  "logs/test.error_log"
 
-    JkMount /* bhd
+    JkMount /* test
 </VirtualHost>
 ```
 
 ### worker.properties 파일 생성
 
 ```bash
-$ vi /etc/httpd/conf/workers.properties
+$ vim /usr/local/httpd/conf/extra/workers.properties
 ```
 ```bash
 // 아래 구문 추가
-worker.list=bhd // 원하는 worker,list 이름 기입
-worker.bhd.port=8009
-worker.bhd.host=172.27.0.215 // WAS Servier IP 기입
-worker.bhd.type=ajp13
-worker.bhd.lbfactor=1
+worker.list=test
+worker.test.port=8009
+worker.test.host={WAS 서버 IP}
+worker.test.type=ajp13
+worker.test.lbfactor=1
 
 복사/붙여넣기를 하실 경우 // 뒤에있는 항목은 꼭 삭제 부탁 드립니다.
+```
+### syntax 확인
+```bash
+/usr/local/httpd/bin/apachectl -t
+```
+
+### 아파치 재기동
+```bash
+systemctl restart httpd
 ```
 
 ## Tomcat Server Setting
 <li> Tomcat 설치가 안되신 분들은 아래 URL 접근하여 설치 진행해주시면 됩니다.</li>
-<li> URL : <a href="https://hyundo0630.github.io/tomcat/CentOS-7-Tomcat-8.5-Install/"> Tomcat Install </a></li>
+<li> URL : <a href="https://hyundo0630.github.io/install/CentOS-7-Tomcat-9.0.70-Install/"> Tomcat Install </a></li>
 <br>
 
 ### Tomcat Server.xml 설정 변경
