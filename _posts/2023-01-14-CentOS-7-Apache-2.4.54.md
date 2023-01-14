@@ -1,0 +1,92 @@
+---
+title : "[CentOS 7] Apache Install"
+categories : 
+    - Install 
+tags :
+    - CentOS 7
+    - Apache
+
+toc: true
+toc_sticky: true
+---
+
+
+테스트 환경<br>
+<li>OS : CentOS 7</li>
+<li>Apache Version : 2.4.6</li>
+<li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li><br>
+
+```bash
+$ netstat -tlnp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/systemd           
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      4158/sshd           
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      4772/master         
+tcp6       0      0 :::111                  :::*                    LISTEN      1/systemd           
+tcp6       0      0 :::22                   :::*                    LISTEN      4158/sshd           
+tcp6       0      0 ::1:25                  :::*                    LISTEN      4772/master  
+```
+
+## 패키지 Yum 설치
+```bash
+$ yum install -y gcc gcc-++ pcre-devel expat-devel
+```
+
+## Apache 필요 설치 파일
+```bash
+$ mkdir -p /home/Apache
+$ cd /home/Apache
+$ wget https://dlcdn.apache.org/apr/apr-1.7.0.tar.gz --no-check-certificate
+$ wget https://dlcdn.apache.org/apr/apr-util-1.6.1.tar.gz --no-check-certificate
+$ wget https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.gz --no-check-certificate
+$ wget https://dlcdn.apache.org/httpd/httpd-2.4.53.tar.gz --no-check-certificate
+$ ll
+total 13180
+-rw-r--r-- 1 root root 1093896 Apr  5  2019 apr-1.7.0.tar.gz
+-rw-r--r-- 1 root root  554301 Oct 23  2017 apr-util-1.6.1.tar.gz
+-rw-r--r-- 1 root root 9743277 Jun  8  2022 httpd-2.4.54.tar.gz
+-rw-r--r-- 1 root root 2096552 Jun 22  2021 pcre-8.45.tar.gz
+```
+
+### 압축 해제
+```bash
+$ tar zxvf apr-1.7.0.tar.gz
+$ tar zxvf apr-util-1.6.1.tar.gz
+$ tar zxvf httpd-2.4.54.tar.gz
+$ tar zxvf pcre-8.45.tar.gz
+$ ll
+total 13204
+drwxr-xr-x 27 1001  1001    4096 Apr  2  2019 apr-1.7.0
+-rw-r--r--  1 root root  1093896 Apr  5  2019 apr-1.7.0.tar.gz
+drwxr-xr-x 20 1001  1001    4096 Oct 18  2017 apr-util-1.6.1
+-rw-r--r--  1 root root   554301 Oct 23  2017 apr-util-1.6.1.tar.gz
+drwxr-xr-x 12  504 games    4096 Jun  6  2022 httpd-2.4.54
+-rw-r--r--  1 root root  9743277 Jun  8  2022 httpd-2.4.54.tar.gz
+drwxr-xr-x  7 1169  1169    8192 Jun 16  2021 pcre-8.45
+-rw-r--r--  1 root root  2096552 Jun 22  2021 pcre-8.45.tar.gz
+```
+
+### 경로 이동
+```bash
+$ mv apr-1.7.0 apr-util-1.6.1 httpd-2.4.54 pcre-8.45 /usr/local
+```
+
+### PCRE 컴파일 설치
+```bash
+$ cd /usr/local/pcre-8.45
+$ ./configure --prefix=/usr/local/pcre
+$ make && make install
+```
+
+### apr,apr-util 디렉토리 httpd 디렉토리로 이동 후 컴파일 설치 진행
+```
+$ mv /usr/local/apr-1.7.0 /usr/local/httpd-2.4.54/srclib/apr
+$ mv /usr/local/apr-util-1.6.1 /usr/local/httpd-2.4.54/srclib/apr-util
+$ cd /usr/local/httpd-2.4.54
+$ ./configure --prefix=/usr/local/httpd \
+--enable-modules=all \
+--enable-so \
+--with-included-apr \
+--with-mpm-shared=all
+$ make && make install
