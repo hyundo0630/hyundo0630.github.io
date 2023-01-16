@@ -13,7 +13,7 @@ toc_sticky: true
 
 테스트 환경<br>
 <li>OS : CentOS 7</li>
-<li>Apache Version : 2.4.6</li>
+<li>Apache Version : 2.4.54</li>
 <li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li><br>
 
 ```bash
@@ -40,7 +40,7 @@ $ cd /home/Apache
 $ wget https://dlcdn.apache.org/apr/apr-1.7.0.tar.gz --no-check-certificate
 $ wget https://dlcdn.apache.org/apr/apr-util-1.6.1.tar.gz --no-check-certificate
 $ wget https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.gz --no-check-certificate
-$ wget https://dlcdn.apache.org/httpd/httpd-2.4.53.tar.gz --no-check-certificate
+$ wget https://dlcdn.apache.org/httpd/httpd-2.4.54.tar.gz --no-check-certificate
 $ ll
 total 13180
 -rw-r--r-- 1 root root 1093896 Apr  5  2019 apr-1.7.0.tar.gz
