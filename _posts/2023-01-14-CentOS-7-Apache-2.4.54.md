@@ -1,5 +1,5 @@
 ---
-title : "[CentOS 7] Apache Install"
+title : "[CentOS 7] Apache 2.4.54 Install"
 categories : 
     - Install 
 tags :
@@ -105,7 +105,7 @@ Type=forking
 PIDFile=/usr/local/httpd/logs/httpd.pid
 ExecStart=/usr/local/httpd/bin/apachectl start
 ExecReload=/usr/local/httpd/bin/apachectl graceful
-ExecStop=/usr/local/apacher2/bin/apachectl stop
+ExecStop=/usr/local/httpd/bin/apachectl stop
 KillSignal=SIGCONT
 PrivateTmp=true
 
