@@ -101,7 +101,7 @@ Description=The Apache HTTP Server
 
 [Service]
 Type=forking
-#EnvironmentFile=/usr/local/httpd/bin/envvars
+     
 PIDFile=/usr/local/httpd/logs/httpd.pid
 ExecStart=/usr/local/httpd/bin/apachectl start
 ExecReload=/usr/local/httpd/bin/apachectl graceful
