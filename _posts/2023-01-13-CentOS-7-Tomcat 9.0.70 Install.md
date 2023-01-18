@@ -42,14 +42,14 @@ $ ll
 -rw-r--r-- 1 root root 11613418 Dec  1 23:20 apache-tomcat-9.0.70.tar.gz
 
 // 압축 해제
-$ tar zxvf apache-tomcat-9.0.71.tar.gz
+$ tar zxvf apache-tomcat-9.0.70.tar.gz
 
 $ ll
 drwxr-xr-x 9 root root      220 Jan 13 16:09 apache-tomcat-9.0.70
 -rw-r--r-- 1 root root 11613418 Dec  1 23:20 apache-tomcat-9.0.70.tar.gz
 
 // 폴더 이동
-$ mv apache-tomcat-9.0.71 /usr/local/Tomcat9
+$ mv apache-tomcat-9.0.70 /usr/local/Tomcat9
 ```
 ### Server.xml 설정
 ```bash
