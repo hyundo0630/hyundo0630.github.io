@@ -95,7 +95,7 @@ $ make && make install
 ## systemctl 등록
 ```bash
 $ vim /etc/systemd/system/httpd.service
-$ vim /etc/systemd/system/httpd.service
+
 [Unit]
 Description=The Apache HTTP Server
 
