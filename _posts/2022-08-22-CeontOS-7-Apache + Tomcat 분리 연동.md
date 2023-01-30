@@ -36,51 +36,7 @@ toc_sticky: true
 
 <li> 설치가 되어 있는 항목은 제외 하고 진행 해 주시면 됩니다. </li>
 
-```bash
-$ yum install gcc gcc-++ httpd-devel
-```
-
-```bash
-Dependencies Resolved
-
-====================================================================================================================================================
- Package                                Arch                        Version                                      Repository                    Size
-====================================================================================================================================================
-Installing:
- httpd-devel                            x86_64                      2.4.6-89.el7.centos.1                        updates                      197 k
-Updating:
- gcc                                    x86_64                      4.8.5-36.el7_6.2                             updates                       16 M
-Installing for dependencies:
- apr-devel                              x86_64                      1.4.8-3.el7_4.1                              base                         188 k
- apr-util-devel                         x86_64                      1.5.2-6.el7                                  base                          76 k
- cyrus-sasl                             x86_64                      2.1.26-23.el7                                base                          88 k
- cyrus-sasl-devel                       x86_64                      2.1.26-23.el7                                base                         310 k
- expat-devel                            x86_64                      2.1.0-10.el7_3                               base                          57 k
- httpd                                  x86_64                      2.4.6-89.el7.centos.1                        updates                      2.7 M
- libdb-devel                            x86_64                      5.3.21-24.el7                                base                          38 k
- openldap-devel                         x86_64                      2.4.44-21.el7_6                              updates                      804 k
-Updating for dependencies:
- cpp                                    x86_64                      4.8.5-36.el7_6.2                             updates                      5.9 M
- gcc-c++                                x86_64                      4.8.5-36.el7_6.2                             updates                      7.2 M
- gcc-gfortran                           x86_64                      4.8.5-36.el7_6.2                             updates                      6.7 M
- httpd-tools                            x86_64                      2.4.6-89.el7.centos.1                        updates                       91 k
- libgcc                                 x86_64                      4.8.5-36.el7_6.2                             updates                      102 k
- libgfortran                            x86_64                      4.8.5-36.el7_6.2                             updates                      300 k
- libgomp                                x86_64                      4.8.5-36.el7_6.2                             updates                      158 k
- libquadmath                            x86_64                      4.8.5-36.el7_6.2                             updates                      189 k
- libquadmath-devel                      x86_64                      4.8.5-36.el7_6.2                             updates                       53 k
- libstdc++                              x86_64                      4.8.5-36.el7_6.2                             updates                      305 k
- libstdc++-devel                        x86_64                      4.8.5-36.el7_6.2                             updates                      1.5 M
- openldap                               x86_64                      2.4.44-21.el7_6                              updates                      356 k
-
-Transaction Summary
-====================================================================================================================================================
-Install  1 Package (+ 8 Dependent packages)
-Upgrade  1 Package (+12 Dependent packages)
-
-Total download size: 43 M
-Is this ok [y/d/N]: y
-```
+<br>
 
 ```bash
 $ wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
