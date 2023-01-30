@@ -123,7 +123,7 @@ localhost:8080
 
 ## systemctl 등록
 ```bash
-$ vim /etc/systemd/system/httpd.service
+$ vim /etc/systemd/system/tomcat.service
 [UNIT]
 Description=tomcat
 After=syslog.target network.target
