@@ -128,3 +128,10 @@ $ :wq
 ```
 
 [ 웹사이트 접근 ]
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Index%20%EA%B4%80%EB%A0%A8/test.html.png?raw=true">
+<li>맨 앞에 위치한 파일이 우선적으로 읽힌다.</li>
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
