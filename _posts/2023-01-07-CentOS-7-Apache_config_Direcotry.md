@@ -65,3 +65,34 @@ ServerRoot "/etc/httpd"
 <li> ServerRoot "/etc/httpd"</li>
 ▶ Apache 각종 설정에서 절대 경로가 아닌, 상대 경로로 작성되면 ServerRoot 에 지정된 디렉토리로부터의 상대 경로이다.
 <br><br>
+
+```bash
+#
+# ErrorLog: The location of the error log file.
+# If you do not specify an ErrorLog directive within a <VirtualHost>
+# container, error messages relating to that virtual host will be
+# logged here.  If you *do* define an error logfile for a <VirtualHost>
+# container, that host's errors will be logged there and not here.
+#
+ErrorLog "logs/error_log"
+```
+<li>ErrorLog 의 경우 경로가 상대경로로 표기된 것을 볼 수 있다.</li>
+▶ 이에 경우, ServerRoot 가 /etc/httpd 임으로 절대 경로는 아래와 같다.<br><br>
+
+```bash
+$ ErrorLog = /etc/httpd/logs/error_log"
+```
+
+### [ 확인 ]
+
+```bash
+$ ll /etc/httpd/logs/error_log
+-rw-r--r-- 1 root root 13803 Apr 10 17:29 /etc/httpd/logs/error_log
+```
+
+<li>error_log 파일이 /etc/httpd/logs 경로에 있는 것을 확인할 수 있다.</li>
+
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
