@@ -49,7 +49,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Linux" %}
-                        <li><a href="/categories/Linux" class=""> install ({{category[1].size}})</a></li>
+                        <li><a href="/categories/Linux" class=""> Linux ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
