@@ -69,6 +69,10 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 
 <br>
 
+# Require Option 확인
+
+## Require all granted
+
 ```bash
 <Directory "/var/www/html">
     #
@@ -98,8 +102,44 @@ $ vim {apache 설치 경로}/conf/httpd.conf
     Require all granted
 </Directory>
 ```
-<li> Directory /var/www/html 보다 상위의 /var/www/ 접근 권한을 denied 로 주었지만,<br>
-/var/www/html 경로를 지정하여 granted ( 접근허용 ) 권한을 주게 되면 /var/www/html 경로 접근이 가능하다.</li>
+### 홈페이지 접근
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true"><br>
+▶ 정상적으로 접근이 가능하다.
+
+## Require all denied ( 모든 접근 불허 )
+```bash
+<Directory "/var/www/html">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options Indexes FollowSymLinks
+
+    #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    AllowOverride None
+
+    #
+    # Controls who can get stuff from this server.
+    #
+    Require all denied
+</Directory>
+```
+
+
+### 홈페이지 접근
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/denied%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
 
 ### Option
 <li>FollowSymLinks : 심볼릭 링크를 허용한다.</li>
