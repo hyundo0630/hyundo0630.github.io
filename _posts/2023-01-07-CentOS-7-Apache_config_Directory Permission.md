@@ -175,7 +175,8 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 ```
 
 ### 홈페이지 접근
-<img src="">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/183.99.76.4%20Requird%20IP.png?raw=true">
+▶ 183.99.76.4 IP 허용을 해두었기에 해당 IP로는 정상적으로 접근이 가능하다.
 
 ### Option
 <li>FollowSymLinks : 심볼릭 링크를 허용한다.</li>
