@@ -140,6 +140,7 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 
 ### 홈페이지 접근
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/denied%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
+
 ▶ /var/www/html 디렉토리 접근이 차단되어 기본 페이지가 출력되는 것을 확인할 수 있다.
 
 ## Require IP granted ( 특정 IP 만 허용)
