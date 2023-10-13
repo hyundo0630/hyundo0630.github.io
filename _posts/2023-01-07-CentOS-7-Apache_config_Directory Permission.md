@@ -62,8 +62,8 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 
 <li>Require all denied : 모든 접근을 불허한다.</li>
 <li>Require all granted : 모든 접근을 허용한다.</li>
-<li>Require IP denied : 해당 IP 접근 불허</li>
-<li>Require IP granted : 해당 IP 접근 허용</li>
+<li>Require ip xxx.xxx.xxx.xxx : 해당 IP 접근 불허</li>
+<li>Require not ip xxx.xxx.xxx.xxx : 해당 IP 접근 허용</li>
 <li>Require Host denied : 해당 호스트 접근 불허</li>
 <li>Require Host granted : 해당 호스트 접근 허용</li>
 
@@ -175,10 +175,10 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 ```
 
 ### 홈페이지 접근
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/183.99.76.4%20Requird%20IP.png?raw=true">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Require%20IP_%ED%97%88%EC%9A%A9_183.99.76.4.png?raw=true">
 ▶ 183.99.76.4 IP 허용을 해두었기에 해당 IP로는 정상적으로 접근이 가능하다.<br><br><br>
 
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/183.99.76.4%20Requird%20IP%20%EC%9D%B4%EC%99%B8%20%EC%B0%A8%EB%8B%A8.png?raw=true">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Require%20IP_%ED%97%88%EC%9A%A9_VPN%20IP.png?raw=true">
 ▶ 183.99.76.4 IP 를 제외한 다른 IP 에서는 /var/www/html 경로 접근이 불가하다. <br><br><br>
 
 ## Require IP granted ( 특정 IP 만 불허)
@@ -218,87 +218,38 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 ▶ not ip 옵션을 주어 183.99.76.4 IP 접근 차단.
 
 ### 홈페이지 접근 확인
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Require%20not%20ip.png?raw=true">
-▶ 139.28.219.138 IP 에서 /var/www/html 정상 접근이 가능하다.
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Require%20IP_%EC%B0%A8%EB%8B%A8_VPN%20IP.png?raw=true"><br>
+▶ 139.28.219.138 IP 에서 접근 시 /var/www/html 정상 접근이 가능하다.<br><br>
 
-<img src="">
-### Option
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Require%20IP_%EC%B0%A8%EB%8B%A8_183.99.76.4.png?raw=true"><br>
+▶ 183.99.76.4 IP 에서 접근 시 /var/www/html 접근이 차단 된다.<br><br>
+
+
+# Option
 <li>FollowSymLinks : 심볼릭 링크를 허용한다.</li>
 <li>Includes : SSI 을 허용한다</li>
 <li>MultiViews : 클라이언트 요청에 따라 적절하게 페이지를 보여준다. 쉽게 생각하면 HTTP 헤드 정보가<br>Accept-Language:ko 라면 Korea 언어에 맞게 데이터를 클라이언트에 전송한다.</li>
 <li>Indexes : 웹 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우<br>디렉토리 안의 파일 목록을 보여준다.</li>
 <li>None : 모든 설정을 부정한다.</li><br>
 
-
-### [ 확인 ]
-
-```bash
-<Directory "/var/www">
-    AllowOverride None
-    # Allow open access:
-    Require all granted
-</Directory>
-```
-<li>Require all granted 상태에서 웹 페이지 접근</li>
-
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
-<li> 정상 접근 가능</li>
-<br>
+## FllowSymLinks
+- 해당 옵션 존재 시 디렉토리 내 모든 파일을 웹 페이지 내에서 볼 수 있게 된다.
 
 ```bash
-<Directory "/var/www">
-    AllowOverride None
-    # Allow open access:
-    Require all denied
-</Directory>
+[root@BHD-Study-DMZ html]# pwd
+/var/www/html
+[root@BHD-Study-DMZ html]# ll
+total 8
+drwxr-xr-x 2 root root 4096 Oct 13 16:44 1
+-rw-r--r-- 1 root root   16 Oct 12 18:21 index.html
+[root@BHD-Study-DMZ html]# ll 1
+total 0
+-rw-r--r-- 1 root root  0 Oct 13 16:42 test1
+-rw-r--r-- 1 root root  0 Oct 13 16:42 test2
+-rw-r--r-- 1 root root  0 Oct 13 16:42 test3
+lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
 ```
-
-<li>Require all denied 상태에서 웹 페이지 접근</li>
-
-<img src="
-<li> 정상 접근 가능</li>
-
-▶ /var/www 경로의 권한은 /var/www/html 상위에 존재하나, 연관성은 없다.
-
-```bash
-<Directory "/var/www/html">
-    #
-    # Possible values for the Options directive are "None", "All",
-    # or any combination of:
-    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
-    #
-    # Note that "MultiViews" must be named *explicitly* --- "Options All"
-    # doesn't give it to you.
-    #
-    # The Options directive is both complicated and important.  Please see
-    # http://httpd.apache.org/docs/2.4/mod/core.html#options
-    # for more information.
-    #
-    Options Indexes FollowSymLinks
-
-    #
-    # AllowOverride controls what directives may be placed in .htaccess files.
-    # It can be "All", "None", or any combination of the keywords:
-    #   Options FileInfo AuthConfig Limit
-    #
-    AllowOverride None
-
-    #
-    # Controls who can get stuff from this server.
-    #
-    Require all granted
-</Directory>
-```
-
-<li>/var/www/html _ Require all granted 상태에서 웹페이지 접근 </li>
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/granted%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
-<li> 정상 접근 가능</li>
-<br>
-[ /var/www/html _ Require all denied 상태에서 웹페이지 접근 ]
-<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/denied%20%EC%98%B5%EC%85%98%20%EC%8B%9C%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80.png?raw=true">
-<li>접근 불가능</li>
-<br>
-▶ 명시된 디렉토리의 절대경로의 단위로 퍼미션 권한이 주어진다는 것을 알 수 있다.
+▶ /var/www/html 경로 내 1 이라는 디렉토리 & test1~3 파일과 test4 디렉토리를 생성해뒀다.
 
 <br><br>
 <div style="text-align:center;">
