@@ -215,7 +215,11 @@ $ vim {apache 설치 경로}/conf/httpd.conf
     </RequireAll>
 </Directory>
 ```
-▶ not ip 옵션을 주어 183.99.76.4 IP 접근 차단 <br><br><br>
+▶ not ip 옵션을 주어 183.99.76.4 IP 접근 차단.
+
+### 홈페이지 접근 확인
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Require%20not%20ip.png?raw=true">
+▶ 139.28.219.138 IP 에서 /var/www/html 정상 접근이 가능하다.
 
 <img src="">
 ### Option
