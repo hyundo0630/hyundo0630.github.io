@@ -233,7 +233,7 @@ $ vim {apache 설치 경로}/conf/httpd.conf
 <li>None : 모든 설정을 부정한다.</li><br>
 
 ## FllowSymLinks
-- 해당 옵션 존재 시 디렉토리 내 모든 파일을 웹 페이지 내에서 볼 수 있게 된다.
+- 해당 옵션 존재 시 디렉토리 심볼릭 링크 접근이 허용되도록 한다.
 
 ```bash
 [root@BHD-Study-DMZ html]# pwd
@@ -253,7 +253,7 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
 
 ### 웹 페이지 접근
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/FllowSymLinks.png?raw=true"><br>
-▶ 해당 디렉토리 내 파일들이 모두 노출된다.
+▶ 해당 디렉토리 내 파일 및 심볼릭 링크 디렉토리도 노출된다
 
 ```bash
 [root@BHD-Study-DMZ 1]# ll
@@ -265,6 +265,29 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
 ```
 ▶ test4 Directory 의 경우 /usr/local/test 로 심볼릭 링크를 걸어 뒀다.
 
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/FllowSymLinks_test4.png?raw=true">
+▶ test4 Directory 클릭 시 심볼릭 링크도 접근 되는 부분을 확인할 수 있다.
+
+
+
+## FllowSymLinks 제외
+```bash
+<Directory "/var/www/html">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    #Options Indexes FollowSymLinks
+    Options Indexes 
+```
 
 
 <br><br>
