@@ -251,6 +251,22 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
 ```
 ▶ /var/www/html 경로 내 1 이라는 디렉토리 & test1~3 파일과 test4 디렉토리를 생성해뒀다.
 
+### 웹 페이지 접근
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/FllowSymLinks.png?raw=true"><br>
+▶ 해당 디렉토리 내 파일들이 모두 노출된다.
+
+```bash
+[root@BHD-Study-DMZ 1]# ll
+total 0
+-rw-r--r-- 1 root root  0 Oct 13 16:42 test1
+-rw-r--r-- 1 root root  0 Oct 13 16:42 test2
+-rw-r--r-- 1 root root  0 Oct 13 16:42 test3
+lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
+```
+▶ test4 Directory 의 경우 /usr/local/test 로 심볼릭 링크를 걸어 뒀다.
+
+
+
 <br><br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
