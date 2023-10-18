@@ -288,7 +288,10 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
     #Options Indexes FollowSymLinks
     Options Indexes 
 ```
+▶ FollowSymLinks 제외
 
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/FllowSymLinks_%EC%A0%9C%EC%99%B8.png?raw=true">
+▶ 심볼릭 링크 걸려있던 디렉토리는 노출되지 않는다.
 
 <br><br>
 <div style="text-align:center;">
