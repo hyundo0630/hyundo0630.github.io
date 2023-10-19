@@ -9,12 +9,12 @@
       <!--전체 글 수-->
       <li>
             📂 <span style="font-family:'KCC-Ganpan';font-size:16px;">전체 글 수</style>
-                <span style="font-family:'Coming Soon';font-size:16px;">{{sum}}</style> 
+                <span style="font-family:'KCC-Ganpan';font-size:16px;">{{sum}}</style> 
                 <span style="font-family:'KCC-Ganpan';font-size:16px;">개</style> 
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title"> Linux </span>
+        <span class="nav__sub-title;font-family:'KCC-Ganpan';font-size:15px;"> Apache </span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
