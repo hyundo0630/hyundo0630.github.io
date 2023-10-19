@@ -12,11 +12,14 @@ $doc-font-size: 16 !default;
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
+/* Main Font */
+$customFontStyle: "KCC-Ganpan"
+
 /* system typefaces */
-$serif: Georgia, Times, serif;
-$sans-serif: "KCC-Ganpan" -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace: Monaco, Consolas, "Lucida Console", monospace;
+$serif: $customFontStyle, Times, serif !default;
+$sans-serif: $customFontStyle, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: $customFontStyle, Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
