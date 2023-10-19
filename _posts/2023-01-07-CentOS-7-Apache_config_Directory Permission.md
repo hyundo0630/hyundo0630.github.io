@@ -298,7 +298,25 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
  ▶ 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우 디렉토리 안의 파일 목록을 보여준다.<br>
 ▶ 상위 FollowSymLinks 항목에서 디렉토리 내 파일목록이 보인것도 Indexes 옵션 때문이다.
 
+```bash
+<Directory "/var/www/html">
+    #
+    # Possible values for the Options directive are "None", "All",
+    # or any combination of:
+    #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+    #
+    # Note that "MultiViews" must be named *explicitly* --- "Options All"
+    # doesn't give it to you.
+    #
+    # The Options directive is both complicated and important.  Please see
+    # http://httpd.apache.org/docs/2.4/mod/core.html#options
+    # for more information.
+    #
+    Options FollowSymLinks
+```
 
+### 웹 페이지 접근
+<img src="">
 
 <br><br>
 <div style="text-align:center;">
