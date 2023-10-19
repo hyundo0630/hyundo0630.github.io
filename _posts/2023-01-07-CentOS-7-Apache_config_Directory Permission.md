@@ -293,6 +293,13 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/FllowSymLinks_%EC%A0%9C%EC%99%B8.png?raw=true">
 ▶ 심볼릭 링크 걸려있던 디렉토리는 노출되지 않는다.
 
+
+## Indexes
+ ▶ 서버의 디렉토리에 접근했을 때 DirectoryIndex 지시자로 설정한 파일이 없을 경우 디렉토리 안의 파일 목록을 보여준다.<br>
+▶ 상위 FollowSymLinks 항목에서 디렉토리 내 파일목록이 보인것도 Indexes 옵션 때문이다.
+
+
+
 <br><br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
