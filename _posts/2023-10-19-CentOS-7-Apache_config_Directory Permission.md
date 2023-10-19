@@ -315,9 +315,11 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
     Options FollowSymLinks
 ```
 
+
 ### 웹 페이지 접근
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Indexes.png?raw=true">
-
+<br>
+▶ "Indexes" 설정 제외 이후 디렉토리 접근이 불가한 것을 확인할 수 있다.
 <br><br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
