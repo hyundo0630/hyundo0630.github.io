@@ -316,7 +316,7 @@ lrwxrwxrwx 1 root root 15 Oct 13 16:44 test4 -> /usr/local/test
 ```
 
 ### 웹 페이지 접근
-<img src="">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/httpd.conf%20%EA%B4%80%EB%A0%A8/Directory%20Permission%20%EA%B4%80%EB%A0%A8/Indexes.png?raw=true">
 
 <br><br>
 <div style="text-align:center;">
