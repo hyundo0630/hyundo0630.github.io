@@ -21,7 +21,7 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Apache" %}
-                        <li><a href="/categories/Apache" class=""> Apache ({{category[1].size}})</a></li>
+                        <li><a href="/categories/Apache" class="" style="font-family:'KCC-Ganpan';font-size:10px;"> Apache ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -29,13 +29,6 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Apache_config" %}
                         <li><a href="/categories/config" class=""> Apache_config ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Connect" %}
-                        <li><a href="/categories/connect" class=""> Connect ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -50,6 +43,18 @@
                 {% for category in site.categories %}
                     {% if category[0] == "Linux" %}
                         <li><a href="/categories/Linux" class=""> Linux ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
+      <li>
+        <!--span 태그로 카테고리들을 크게 분류 eConnect++/C#-->
+        <span class="nav__sub-title;font-family:'KCC-Ganpan';font-size:15px;"> Connect </span>
+        <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
+            <ul>
+                {% for category in site.categories %}
+                    {%  if category[0] == "Connect" %}
+                        <li><a href="/categories/connect" class=""> Connect ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
