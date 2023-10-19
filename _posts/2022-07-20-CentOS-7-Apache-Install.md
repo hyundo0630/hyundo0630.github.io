@@ -11,7 +11,7 @@ toc_sticky: true
 ---
 
 <!--font-->
-<span style="font-family:'KCC-Ganpan';">
+<div style="font-family:'KCC-Ganpan';">
 
 테스트 환경<br>
 <li>OS : CentOS 7</li>
@@ -49,7 +49,7 @@ yum install httpd httpd-devel
 ## 웹 사이트 접근
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/apache%20test%20page.png?raw=true">
 <li> 위와 같이 Testing Page 가 접근이 되면 성공입니다.</li>
-</style>
+</div>
 
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
