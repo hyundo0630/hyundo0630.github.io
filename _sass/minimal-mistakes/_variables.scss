@@ -13,10 +13,10 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* Main Font */
-$customFontStyle: "KCC-Ganpan";
+$customFontStyle: 'KCC-Ganpan';
 
 /* system typefaces */
-$serif: $customFontStyle, Times, serif !default;
+$serif: $customFontStyle, Georgia, Times, serif !default;
 $sans-serif: $customFontStyle, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: $customFontStyle, Monaco, Consolas, "Lucida Console", monospace !default;
