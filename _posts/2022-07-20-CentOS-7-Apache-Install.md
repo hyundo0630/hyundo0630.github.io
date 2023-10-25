@@ -10,12 +10,11 @@ toc: true
 toc_sticky: true
 ---
 
-<div style="font-family:'KCC-Ganpan';">
 테스트 환경<br>
-<li>OS : CentOS 7</li>
-<li>Apache Version : 2.4.6</li>
-<li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li><br>
-</div>
+&nbsp;<li>OS : CentOS 7</li>
+&nbsp;<li>Apache Version : 2.4.6</li>
+&nbsp;<li>Apache 설치 전, 서버 내부 Port 상태를 확인 해줍니다.</li><br>
+
 
 ```bash
 # netstat -tlnp
@@ -31,9 +30,9 @@ yum install httpd httpd-devel
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/CentOS7%20Install%20%EB%B2%84%EC%A0%84%20%EC%B2%B4%ED%81%AC.png?raw=true">
 <br>
 
-<div style="font-family:'KCC-Ganpan';">
+
 <li>버전 확인 후 'Y' 를 진행해 줍니다</li>
-</div>
+
 
 <br>
 
@@ -50,9 +49,9 @@ yum install httpd httpd-devel
 
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Apache%20Install/CentOS7%2080%20Port.png?raw=true">
 
-<div style="font-family:'KCC-Ganpan';">
+
 <li>Apache 기동 후 정상적으로 80 Port 가 올라와 있는지 체크</li>
-</div>
+
 
 <br>
 
