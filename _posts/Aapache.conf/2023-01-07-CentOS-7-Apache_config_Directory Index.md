@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_Directory_Index"
+title : "[CentOS 7] Apache httpd.conf_Directory_Index"
 categories :
     - Apache_config
 tages :

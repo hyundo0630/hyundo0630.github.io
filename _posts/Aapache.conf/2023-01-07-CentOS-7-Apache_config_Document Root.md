@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_Document_Root"
+title : "[CentOS 7] Apache httpd.conf_Document_Root"
 categories :
     - Apache_config
 tages :

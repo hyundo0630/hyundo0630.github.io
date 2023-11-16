@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_Include"
+title : "[CentOS 7] Apache httpd.conf_Include"
 categories :
     - Apache_config
 tages :

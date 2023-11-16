@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_Port"
+title : "[CentOS 7] Apache httpd.conf_Port"
 categories :
     - Apache_config
 tages :

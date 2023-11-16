@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_ServerName"
+title : "[CentOS 7] Apache httpd.conf_ServerName"
 categories :
     - Apache_config
 tages :

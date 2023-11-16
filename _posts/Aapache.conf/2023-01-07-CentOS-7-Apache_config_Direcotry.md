@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_Directory_위치"
+title : "[CentOS 7] Apache httpd.conf_Directory_위치"
 categories :
     - Apache_config
 tages :

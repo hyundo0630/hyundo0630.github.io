@@ -1,5 +1,5 @@
 ---
-title : "[CentOS7] Apache httpd.conf_Directory_Permission"
+title : "[CentOS 7] Apache httpd.conf_Directory_Permission"
 categories :
     - Apache_config
 tages :
