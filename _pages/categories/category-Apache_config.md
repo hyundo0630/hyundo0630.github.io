@@ -4,7 +4,6 @@ layout: archive
 permalink: /categories/config
 author_profile: true
 sidebar_main: true
-font-family: 'KCC-Ganpan'
 ---
 
 
