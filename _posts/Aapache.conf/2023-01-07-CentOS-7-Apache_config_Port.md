@@ -2,7 +2,7 @@
 title : "[CentOS 7] Apache httpd.conf_Port"
 categories :
     - Apache_config
-tages :
+tags :
     - CentOS 7
     - Apache
 

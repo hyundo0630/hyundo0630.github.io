@@ -2,7 +2,7 @@
 title : "[CentOS 7] Apache httpd.conf_Document_Root"
 categories :
     - Apache_config
-tages :
+tags :
     - CentOS 7
     - Apache
 

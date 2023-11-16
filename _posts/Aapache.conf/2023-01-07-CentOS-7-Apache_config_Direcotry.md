@@ -2,7 +2,7 @@
 title : "[CentOS 7] Apache httpd.conf_Directory_위치"
 categories :
     - Apache_config
-tages :
+tags :
     - CentOS 7
     - Apache
 
