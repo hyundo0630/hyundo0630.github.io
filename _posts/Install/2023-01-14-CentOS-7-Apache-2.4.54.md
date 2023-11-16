@@ -1,7 +1,7 @@
 ---
 title : "[CentOS 7] Apache 2.4.54 Install"
 categories : 
-    - Install 
+    - Truble Sutting
 tags :
     - CentOS 7
     - Apache
