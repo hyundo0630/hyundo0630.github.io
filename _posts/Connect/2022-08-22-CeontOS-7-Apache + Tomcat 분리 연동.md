@@ -36,6 +36,10 @@ toc_sticky: true
 
 <li> 설치가 되어 있는 항목은 제외 하고 진행 해 주시면 됩니다. </li>
 
+## 사전 필수 설치
+```bash
+$ yum install gcc gcc-c++ httpd-devel
+```
 <br>
 
 ```bash
