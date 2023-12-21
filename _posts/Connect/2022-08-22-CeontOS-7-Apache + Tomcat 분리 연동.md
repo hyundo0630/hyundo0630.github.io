@@ -39,7 +39,7 @@ toc_sticky: true
 <br>
 
 ```bash
-$ wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
+$ wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.49-src.tar.gz
 
 --2022-09-05 16:13:22--  http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
 Resolving mirror.navercorp.com (mirror.navercorp.com)... 125.209.216.167
