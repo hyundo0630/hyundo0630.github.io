@@ -95,3 +95,19 @@ LogLevel info
 ```bash
 # systemctl restart httpd
 ```
+
+### test_error_log 확인
+```bash
+[Fri Jan 12 03:50:01.206873 2024] [lbmethod_heartbeat:notice] [pid 20774] AH02282: No slotmem from mod_heartmonitor
+[Fri Jan 12 03:50:01.223372 2024] [mpm_prefork:notice] [pid 20774] AH00163: Apache/2.4.6 (CentOS) mod_jk/1.2.49 configured -- resuming normal operations
+[Fri Jan 12 03:50:01.223381 2024] [mpm_prefork:info] [pid 20774] AH00164: Server built: May 30 2023 14:01:11
+[Fri Jan 12 03:50:01.223386 2024] [core:notice] [pid 20774] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+```
+▶ info 상태 이상의 로그가 출력되는 것을 볼수 있다.
+
+▶ 이러한 방법으로 원하는 레벨의 로그를 지정하여 출력할 수 있다.
+
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
