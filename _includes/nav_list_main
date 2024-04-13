@@ -105,5 +105,17 @@
                 {% endfor %}
             </ul>
       </li>
+                  <li>
+        <!--span 태그로 카테고리들을 크게 분류 -->
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#f0e68c;"> OS </style></span>
+        <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Rocky Linux" %}
+                        <li><a href="/categories/Rocky" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Rocky Linux ({{category[1].size}})</a></style></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
   </ul>
 </nav>
