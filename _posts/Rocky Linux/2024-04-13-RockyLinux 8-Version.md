@@ -3,7 +3,6 @@ title : "[RockyLinux 8] Version 정보 확인"
 categories :
     - Rocky Linux
 tags :
-    - Rocky Linux
     - OS
 
 toc : true
