@@ -1,5 +1,5 @@
 ---
-title: "Rocky Linux"
+title: "Rocky_Linux"
 layout: archive
 permalink: /categories/Rocky
 author_profile: true
