@@ -1,7 +1,7 @@
 ---
-title : "[RockyLinux 8.8] K8S 구축"
+title : "[RockyLinux 8.8] Kubernetes 구축"
 categories :
-    - Rocky Linux
+    - Rocky
 tags :
     - Rocky Linux
     - OS
