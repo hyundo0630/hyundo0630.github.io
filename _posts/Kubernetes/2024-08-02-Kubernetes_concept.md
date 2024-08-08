@@ -20,7 +20,7 @@ toc_sticky : true
 <br>
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Kubernetes/iaas.png?raw=true" width="100%">
 
-▣ Traditional Deployment<br>
+**▣ Traditional Deployment<br>**
 초기에는 물리장비에 운영체제를 설치하고 운영체제에 애플리케이션을 설치하여 실행 했었다.<br>
 여러 애플리케이션을 한 물리장비에서 실행하였을 때, 각 애플리케이션마다 할당되는 리소스를 정의할 방법이 없었기에 리소스 할당 문제가 발생했다.<br>
 - ex ) 리소스를 전부 차지하는 애플리케이션이 존재할 수 있고, 이로 인해 다른 애플리케이션 성능이 저하될 수 있었다.
