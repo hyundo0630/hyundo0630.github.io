@@ -17,7 +17,7 @@ toc_sticky : true
 - K8s 라는 표기는 「K」 와 「s」 사이에 있는 8글자를 나타내는 약식 표기이다.
 
 ###  쿠버네티스가 나타나기 전까지 여정
-   
+<br>
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Kubernetes/iaas.png?raw=true" width="100%">
 
 ▣ Traditional Deployment<br>
