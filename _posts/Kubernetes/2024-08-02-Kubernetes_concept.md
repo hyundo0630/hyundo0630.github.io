@@ -20,20 +20,20 @@ toc_sticky : true
 <br>
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Kubernetes/iaas.png?raw=true" width="100%">
 
-### ▣ Traditional Deployment<br><br>
+### ▣ Traditional Deployment
 초기에는 물리장비에 운영체제를 설치하고 운영체제에 애플리케이션을 설치하여 실행 했었다.<br>
 여러 애플리케이션을 한 물리장비에서 실행하였을 때, 각 애플리케이션마다 할당되는 리소스를 정의할 방법이 없었기에 리소스 할당 문제가 발생했다.<br>
 - ex ) 리소스를 전부 차지하는 애플리케이션이 존재할 수 있고, 이로 인해 다른 애플리케이션 성능이 저하될 수 있었다.
 
 이에 대한 해결책으로 서로 다른 여러 물리장비에서 각 애플리케이션을 실행하는 방안이 있었으나, 이는 리소스가 충분이 활용되지 않는다는 점에서 확장 가능하지 않았고 여러 대의 물리 장비를 유지하는 데에 많은 비용이 발생 되었다.
 
-### ▣ Virtualized Deployment<br><br>
+### ▣ Virtualized Deployment
 Traditional Deployment 의 해결책으로 가상화가 도입 되었다.<br>
 단일 물리서버의 CPU 에서 여러 가상시스템(VM, Virtual Machines) 을 실행할 수 있게 된다. 가상화 기술을 이용하여 VM 내 애플리케이션을 실행하고 애플리케이션의 정보를 다른 애플리케이션에서 자유롭게 액세스 할 수 없으므로 일정 수준의 보안성도 갖추게 되었다.<br><br>
 
 가상화를 이용하여 물리 서버에서 리소스를 보다 효율적으로 활용할 수 있으며, 쉽게 애플리케이션을 추가하거나 업데이트 할 수 있고 하드웨어 비용을 절감할 수 있어 더 나은 확장성을 제공할 수 있게 되었다. 가상화를 통해 일련의 물리 리소스를 폐기 가능한(disposable) 가상 머신으로 구성된 클러스터로 만들 수 있다.
 
-### Container Deployment<br><br>
+### Container Deployment
 Container 는 VM 과 유사하지만 격리 속성을 완화하여 애플리케이션 간 운영체제(OS)를 공유한다. 따라서 Container 는 가벼워진다. VM 과 마찬가지로 컨테이너에는 자체 파일시스템, CPU, Memory, Process 공간 등이 있다. 기본 인프라와의 종속성을 끊었기 때문에, 클라우드나 OS 배포본에 모두 이전할 수 있다.
 
 
