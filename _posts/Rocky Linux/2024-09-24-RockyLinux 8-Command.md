@@ -15,6 +15,7 @@ toc_sticky : true
 「DNF」 는 RPM 기반의 리눅스 배포판에서 주로 사용되며, Fedora, CentOS, RHEL (RED Hat Enterprise Linux) 등에서 사용되기 때문에 리눅스 시스템 관리자나 사용자에게 패키지 관리와 시스템 업데이트에 매우 유용한 도구이다.
 
 ## DNF 와 YUM 공통점
+
 ||YUM|DNF|
 |:--:|:--:|:--:|
 |패키지설치|yum install [패키지명]|dnf install [패키지명]|
@@ -26,6 +27,7 @@ toc_sticky : true
 |Repository에서 패키지 검색|yum search [패키지명]|dnf search [패키지명]|
 
 ## DNF 와 YUM 차이점
+
 ||YUM|DNF|
 |:--:|:--:|:--:|
 |RPM 의존성 문제 해결|패키지 설치 간 의존성이 있는 다른 패키지가 선 설치가 되어야하는 종속성 문제가 발생 될 수 있으며, 이러한 문제를 해결하려면 수동 개입이 필요할 수 있다.|패키지 설치 시 의존성이 있는 다른 패키지를 먼저 설치한다. rpm은 설치하려는 rpm 파일이 dvd에 있거나 인터넷을 통해 미리 다운로드 하여 설치해야 하지만, dnf는 인터넷을 통해 알아서 설치해준다.|
