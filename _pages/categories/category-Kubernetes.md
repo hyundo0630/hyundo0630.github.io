@@ -1,11 +1,11 @@
 ---
-title: "K8s"
+title: "Kubernetes"
 layout: archive
-permalink: /categories/K8s
+permalink: /categories/Kubernetes
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.K8s %}
+{% assign posts = site.categories.Kubernetes %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
