@@ -1,7 +1,7 @@
 ---
 title: "Version"
 layout: archive
-permalink: /categories/Version
+permalink: /categories/version
 author_profile: true
 sidebar_main: true
 ---

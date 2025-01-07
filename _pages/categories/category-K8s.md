@@ -1,7 +1,7 @@
 ---
 title: "K8s"
 layout: archive
-permalink: /categories/K8s
+permalink: /categories/k8s
 author_profile: true
 sidebar_main: true
 ---

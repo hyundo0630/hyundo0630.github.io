@@ -33,21 +33,21 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "DNF" %}
-                        <li><a href="/categories/DNF" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> DNF ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/dnf" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> DNF ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "K8s" %}
-                        <li><a href="/categories/K8s" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> K8s ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/k8s" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> K8s ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Version" %}
-                        <li><a href="/categories/Version" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Version ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/version" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Version ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -131,7 +131,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Kubernetes" %}
-                        <li><a href="/categories/K8s" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Kubernetes ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/kubernetes" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Kubernetes ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
