@@ -74,5 +74,10 @@ toc_sticky : true
 
 ### 12. Rocky NFV Repository
 ● **역할** : NFV Repository 는 NFV 관련 소프트웨어와 도구들을 제공한다. `NFV는 네트워크 서비스를 물리적 장비 대신 가상화 된 인프라에서 제공하는 기술`로, 이를 구현하기 위한 다양한 페키지들이 이 Repository 에서 관리된다.<br>
-● **예시 패키지** : OpenStack, VNF, OVS, DPDK
-● **주요 용도** : NFV 기반 네트워크 환경 구축, 클라우드 기반 네트워크 서비스 제공, 네트워크 성능 최적화, 오픈소스 기반 NFV 솔루션 구현 등.
+● **예시 패키지** : OpenStack, VNF, OVS, DPDK 등. <br>
+● **주요 용도** : NFV 기반 네트워크 환경 구축, 클라우드 기반 네트워크 서비스 제공, 네트워크 성능 최적화, 오픈소스 기반 NFV 솔루션 구현 등.<br>
+
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
+</div>
