@@ -12,5 +12,13 @@ toc_sticky: true
 # Azure Virtual Machine 생성
 ### Azure Portal Access
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Image.png?raw=true">
-▲ Azure Potal 에 기본적으로 접근하면 위와 같은 화면을 보실 수 있습니다.
+▲ Azure Potal 에 기본적으로 접근하면 위와 같은 화면을 보실 수 있습니다.<br><br><br>
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine.png?raw=true">
+▲ Azure Virtual Machine 을 만들기 위해 빨간 네모박스를 클릭해 줍니다.
+<br><br><br>
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create.png?raw=true">
+▲ 만들기를 클릭하여 줍니다.
+<br><br><br>
 
