@@ -21,7 +21,7 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Apache_config" %}
-                        <li><a href="/categories/config" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Apache ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/config" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Apache ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -33,28 +33,28 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "DNF" %}
-                        <li><a href="/categories/dnf" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> DNF ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/dnf" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> DNF ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "K8s" %}
-                        <li><a href="/categories/k8s" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> K8s ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/k8s" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> K8s ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Version" %}
-                        <li><a href="/categories/version" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Version ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/version" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Version ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "repository" %}
-                        <li><a href="/categories/repository" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Repository ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/repository" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Repository ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -66,7 +66,7 @@
             <ul>
                 {% for category in site.categories %}
                     {%  if category[0] == "Connect" %}
-                        <li><a href="/categories/connect" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Connect ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/connect" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Connect ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -78,7 +78,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Install" %}
-                        <li><a href="/categories/install" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> install ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/install" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> install ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -90,7 +90,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Linux" %}
-                        <li><a href="/categories/Linux" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Linux ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/Linux" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Linux ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -102,7 +102,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Truble_Shooting" %}
-                        <li><a href="/categories/Truble" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Truble Shooting ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/Truble" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Truble Shooting ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -114,7 +114,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "pacemaker" %}
-                        <li><a href="/categories/pacemaker" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> pacemaker ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/pacemaker" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> pacemaker ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -126,7 +126,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Networks" %}
-                        <li><a href="/categories/Networks" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Networks ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/Networks" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Networks ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -138,7 +138,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Kubernetes" %}
-                        <li><a href="/categories/kubernetes" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Kubernetes ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/kubernetes" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Kubernetes ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -150,7 +150,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Azure" %}
-                        <li><a href="/categories/azure" class="" style="font-family:'KCC-Ganpan';font-size:16px;"> Azure ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/azure" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Azure ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
