@@ -14,7 +14,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec"> CentOS 7 </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53"> CentOS 7 </style></span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
@@ -28,7 +28,7 @@
       </li>
         <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Rocky Linux </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Rocky Linux </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -61,7 +61,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Connect </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Connect </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -73,7 +73,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Install </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Install </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -85,7 +85,7 @@
         </li>
         <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Linux </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Linux </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -97,7 +97,7 @@
         </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Truble Shooting </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Truble Shooting </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -109,7 +109,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> pacemaker </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> pacemaker </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -121,7 +121,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Networks </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Networks </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -133,7 +133,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Kubernetes </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Kubernetes </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -145,7 +145,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 -->
-        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#73c8ec;"> Cloud </style></span>
+        <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Cloud </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
