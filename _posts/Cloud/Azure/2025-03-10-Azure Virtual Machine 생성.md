@@ -26,3 +26,8 @@ toc_sticky: true
 ▲ 리소스 그룹&nbsp;:　신규로 만들거나, 기존 생성한 리소스 선택<br>
 　지역&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 　원하는 Resion 선택<br>
 　가용성 영역&nbsp;&nbsp;:　AWS 의 Multi-AZ 와 같이 가용성 영역을 선택
+<br><br><br>
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create_1-2.png?raw=true">
+▲ 크기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Image 별 기본 크기가 있는 것으로 생각 된다. 사양을 올리고 싶은 경우 모든 크기 보기를 선택하여 원하는 사양으로 지정해주면 적용 된다.<br>
+　SSH 공개키 원본 : 
