@@ -37,3 +37,4 @@ toc_sticky: true
 　SSH 키 유형 　　　 :　원하는 Key 암호화 방식을 선택<br>
 　키 쌍 이름　　　 　:　SSH Private Key 이름<br>
 　인바운드 포트 규칙 :　VM 생성 시 사전 추가 없이 허용할 포트 선택
+
