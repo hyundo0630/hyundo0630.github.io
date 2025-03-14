@@ -68,3 +68,20 @@ toc_sticky: true
 <ul>플랫폼 관리형 키가 있는 인프라 암호화 계층과 디스크 암호화 집합에서 정의하는 고객 관리형 키가 있는 디스크 암호화 계층, 2개의 암호화 계층</ul>
 </ol>
 
+### :satellite: Networks
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create_1-4.png?raw=true">
+<li>가상 네트워크</li>
+<ol>
+<ul>- 가상 네트워크는 Azure에서 서로 논리적으로 격리</ul>
+<ul>- 데이터 센터의 기존 네트워크와 상당히 비슷하게 IP 주소 범위, 서브넷, 경로 테이블, 게이트웨이 및 보안 설정 구성</ul>
+<ul>- 동일한 가상 네트워크 내 VM들은 기본적으로 서로 통신이 가능</ul>
+</ol>
+<li>인바운드 포트 선택 (4가지 기본 제공)</li>
+<ol>
+<ul>- HTTP</ul>
+<ul>- HTTPS</ul>
+<ul>- SSH</ul>
+<ul>- RDP</ul>
+<br>
+
+위의 과정을 모두 진행 하였다면, `검토+만들기` 를 통해 VM 을 생성합니다.
