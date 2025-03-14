@@ -41,3 +41,16 @@ toc_sticky: true
 <li>인바운드 포트 규칙 : VM 생성 시 사전 추가 없이 허용할 포트 선택</li>
 
 ### :dvd: Disk
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create_1-3.png?raw=true">
+<li>OS 디스크 크기 : GiB 단위로 표기되며, 원하는 Disk 용량 선택</li>
+<li>OS 디스크 유형
+<ol><b>로컬 중복 스토리지</b>
+<ul>- 프리미엄 SSD : 프로덕션 및 성능에 중요한 워크로드에 적합</ul>
+<ul>- 표준 SSD : 웹 서버, 사용량이 적은 엔터프라이즈 어플리케이션 및 개발/테스트에 적합</ul>
+<ul>- 표준 SSD : 중요하지 않고 드문 백업 엑세스에 적합</ul>
+</ol>
+<ol><b>영역 중복 스토리지</b>
+<ul>- 프리미엄 SSD : 영역 실패에 대한 스토리지 복원이 필요한 프로덕션 워크로드에 적합</ul>
+<ul>- 표준 SSD : 영역 실패에 대한 스토리지 복원력이 필요한 웹 서버, 사용량이 적은 엔터프라이즈 어플리케이션 및 개발/테스트에 적합</ul>
+</ol>
+</li>
