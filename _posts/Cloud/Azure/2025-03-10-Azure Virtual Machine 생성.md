@@ -22,6 +22,8 @@ toc_sticky: true
 ▲ 만들기를 클릭하여 줍니다.
 <br><br><br>
 
+### :computer: 기본 사양
+
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create_1-1.png?raw=true">
 <li>리소스 그룹 : 신규로 만들거나, 기존 생성한 리소스 선택</li>
 <li>지역 : 원하는 Resion 선택</li>
@@ -38,6 +40,4 @@ toc_sticky: true
 <li>키 쌍 이름 : SSH Private Key 이름</li>
 <li>인바운드 포트 규칙 : VM 생성 시 사전 추가 없이 허용할 포트 선택</li>
 
-:computer_disk:
-:optical_disk:
-:dvd:
+### :dvd: Disk
