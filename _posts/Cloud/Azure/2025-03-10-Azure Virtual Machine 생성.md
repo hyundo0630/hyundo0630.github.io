@@ -84,7 +84,7 @@ toc_sticky: true
 <ul>- RDP</ul>
 <br>
 
-위의 과정을 모두 진행 하였다면, `검토+만들기` 를 통해 VM 을 생성합니다.
+위의 과정을 모두 진행 하였다면, `검토+만들기` 를 통해 VM 을 생성합니다.<br>
 
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create_1-5.png?raw=true">
 
