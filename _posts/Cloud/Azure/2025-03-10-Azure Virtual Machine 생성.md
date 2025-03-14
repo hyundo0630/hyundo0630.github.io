@@ -85,3 +85,11 @@ toc_sticky: true
 <br>
 
 위의 과정을 모두 진행 하였다면, `검토+만들기` 를 통해 VM 을 생성합니다.
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Azure%20%EA%B4%80%EB%A0%A8/Azure%20Portal%20Virtual%20Machine%20Create_1-5.png?raw=true">
+
+▲ 마지막으로 본인이 설정한 값이 맞는지 재 검토 후, `만들기` 버튼을 클릭하여 VM 을 생성해 줍니다.
+
+<br><br>
+<div style="text-align:center;">
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
