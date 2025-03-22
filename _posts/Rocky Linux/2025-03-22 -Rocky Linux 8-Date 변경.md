@@ -27,6 +27,15 @@ toc_sticky : true
 $ timedatectl set-time zone Asia/Seoul
 ```
 
+### 🕑 한국 시간 변경 확인
+
+```bash
+$ timedatectl
+```
+
+<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Rocky%20Linux%20%EA%B4%80%EB%A0%A8/Date%20%EB%B3%80%EA%B2%BD/Rocky%20Linux%20%ED%95%9C%EA%B5%AD%20%EC%8B%9C%EA%B0%84%20%EB%B3%80%EA%B2%BD.png?raw=true">
+
+
 <br><br>
 <div style="text-align:center;">
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.gif?raw=true" width="200" height="200">
