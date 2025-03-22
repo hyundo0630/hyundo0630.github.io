@@ -1,10 +1,10 @@
 ---
 title : "[RockyLinux 8] Date 날짜 및 시간 변경
 categories :
-    - Time
     - Date
 tags :
     - Rocky Linux
+    - Time
 
 toc : true
 toc_sticky : true
