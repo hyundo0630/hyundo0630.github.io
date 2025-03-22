@@ -61,7 +61,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Date" %}
-                        <li><a href="/categories/repository" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Date ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/Date" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Date ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
