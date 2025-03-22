@@ -1,5 +1,5 @@
 ---
-title : "[RockyLinux 8] Date 날짜 및 시간 변경
+title : "[RockyLinux 8] Date 날짜 및 시간 변경"
 categories :
     - Date
 tags :
