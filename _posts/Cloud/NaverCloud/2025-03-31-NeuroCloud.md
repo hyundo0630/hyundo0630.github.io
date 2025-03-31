@@ -12,13 +12,15 @@ toc: true
 toc_sticky: true
 ---
 
-##### NueroCloud 에 대해 알아보기 전에, 용어의 유래가 궁금해서 검색해보았다.
+**NueroCloud 에 대해 알아보기 전에, 용어의 유래가 궁금해서 검색해보았다.**
 
 
 
-##### <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Naver%20Cloud%20%EA%B4%80%EB%A0%A8/Neuro.png?raw=true" weight="40" height="40"> Neuro
+**<img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Naver%20Cloud%20%EA%B4%80%EB%A0%A8/Neuro.png?raw=true" width="30" height="30"> Neuro**
 - 신경
-> 어떠한 서비스이길래 신경이란 용어와 Cloud 를 합쳤는지 궁금증이 더 증폭되었다.
+```bash
+어떠한 서비스이길래 신경이란 용어와 Cloud 를 합쳤는지 궁금증이 더 증폭되었다.
+```
 
 # Neurocloud
 신개념 하이브리드 클라우드인 `뉴로클라우드`는 민감한 국내 정보보호 규정을 준수 하면서
@@ -34,7 +36,7 @@ toc_sticky: true
 ## :city_sunrise: 랙 타입(Rack Type)
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Naver%20Cloud%20%EA%B4%80%EB%A0%A8/Rack%20Type.png?raw=true">
 
-> 이미 전산공간을 보유중인 고객에게 적합한 타입 입니다.
+**이미 전산공간을 보유중인 고객에게 적합한 타입 입니다.**
 
 <br>
 이미 전산 공간을 보유하고 있으나 보안 문제로 인해 클라우드 도입이 어려운<br>
@@ -43,7 +45,7 @@ toc_sticky: true
 ## :rocket: 스마트 서버팜 ( 실내형 컨테이너 데이터센터 타입 )
 <img src="https://github.com/hyundo0630/hyundo0630.github.io/blob/main/images/Naver%20Cloud%20%EA%B4%80%EB%A0%A8/%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%84%9C%EB%B2%84%20%ED%8C%9C.jpg?raw=true">
 
-> 미니 데이터 센터인 `스마트 서버 팜`과 `뉴로 클라우드` 를 함께 제공하는 타입
+**미니 데이터 센터인 `스마트 서버 팜`과 `뉴로 클라우드` 를 함께 제공하는 타입**
 
 <br>
 미니 데이터 센터 타입의 뉴로클라우드를 함께 제공하는 타입입니다.
