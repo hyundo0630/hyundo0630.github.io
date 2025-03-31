@@ -168,6 +168,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "NaverCloud" %}
+                        <li><a href="/categories/ncp" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> NaverCloud ({{category[1].size}})</a></style></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
       </li>
   </ul>
 </nav>
