@@ -9,7 +9,7 @@ tags :
 toc : true
 toc_sticky : true
 ---
-<!--> 툴팁박스 공통 -->
+<!-- 툴팁박스 공통 -->
 <style>
 .tooltip {
   position: relative;
@@ -38,7 +38,7 @@ toc_sticky : true
   opacity: 1;
 }
 </style>
-<!--> -->
+<!---->
 
 # 컨테이너 런타임이란?
 컨테이너 실행을 담당하는 소프트웨어
