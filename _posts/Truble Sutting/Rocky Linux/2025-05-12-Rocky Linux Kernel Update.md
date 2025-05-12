@@ -1,7 +1,7 @@
 ---
 title : "[Rocky Linux 8.10] kernel Update"
 categories : 
-    - Truble_Sutting
+    - Truble_Shooting
     - Rocky Linux
     - Kernel
 tags :
@@ -15,8 +15,9 @@ toc_sticky: true
 
 # 개요
 <li> K8S v1.32 Version 설치를 진행하며 Rocky Linux Kernel version 이슈로 인해 설치가 불가한 이슈가 발생했다. </li>
-<li> Kernel 4.18.0-553.51.1.el8_10.x86_64 > 6.18 버전으로 업그레이드를 진행하고 나니, SystemCgroup 에서 CPU Check 를 하고있지 않는 이슈 발생</li>
+<li> Kernel 4.18.0-553.51.1.el8_10.x86_64 > 6.18 버전으로 업그레이드를 진행하고 나니, SystemCgroup 에서 CPU SET 를 하고있지 않는 이슈 발생</li>
 <li> System Cgroup 에서 CPUSET 를 하지 못하면 K8s 설치가 불가 // 원복 진행 </li>
+<br><br>
 
 # 상황 재연을 위해 K8s 동일하게 설치 진행
 ## 기본 시스템 업데이트
@@ -308,6 +309,7 @@ sudo reboot
 ```
 
 ### /etc/default/grub
+
 |변경 전|변경 후|변경사항|
 |:--:|:--:|:--:|
 |GRUB_TIMEOUT=5|GRUB_TIMEOUT=5|없음|
