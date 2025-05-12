@@ -317,7 +317,7 @@ sudo reboot
 |GRUB_DEFAULT=saved|GRUB_DEFAULT=saved|없음|
 |GRUB_DISABLE_SUBMENU=true|GRUB_DISABLE_SUBMENU=true|없음|
 |GRUB_TERMINAL_OUTPUT="console"|GRUB_TERMINAL_OUTPUT="console"|없음|
-||GRUB_CMDLINE_LINUX="crashkernel=auto resume=/dev/mapper/rl-swap rd.lvm.lv=rl/root rd.lvm.lv=rl/swap" systemd.unified_cgroup_hierarchy=1|systemd.unified_cgroup_hierarchy=1 옵션 추가|
+|GRUB_CMDLINE_LINUX="crashkernel=auto resume=/dev/mapper/rl-swap rd.lvm.lv=rl/root rd.lvm.lv=rl/swap"|GRUB_CMDLINE_LINUX="crashkernel=auto resume=/dev/mapper/rl-swap rd.lvm.lv=rl/root rd.lvm.lv=rl/swap systemd.unified_cgroup_hierarchy=1"|systemd.unified_cgroup_hierarchy=1 옵션 추가|
 |GRUB_DISABLE_RECOVERY="true"|GRUB_DISABLE_RECOVERY="true"|없음|
 |GRUB_ENABLE_BLSCFG=true|GRUB_ENABLE_BLSCFG=true|없음|
 
