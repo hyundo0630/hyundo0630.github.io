@@ -1,7 +1,7 @@
 ---
 title: "Rocky Linux"
 layout: archive
-permalink: /categories/Rocky_Linux
+permalink: /categories/RockyLinux
 author_profile: true
 sidebar_main: true
 ---
