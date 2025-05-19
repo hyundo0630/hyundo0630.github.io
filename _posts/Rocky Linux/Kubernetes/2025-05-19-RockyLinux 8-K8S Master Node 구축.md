@@ -1,10 +1,10 @@
 ---
-title : "[Kubernetes] 컨테이너 런 타임 설치"
+title : "[Kubernetes] Master Node (컨트롤 플레인) 구축"
 categories :
     - K8s
 tags :
     - Rocky Linux
-    - OS
+    - Master Node
 
 toc : true
 toc_sticky : true
@@ -64,8 +64,31 @@ toc_sticky : true
 
 ```bash
 $ sudo dnf update -y
-$ sudo hostname set-hostname k8s-master
+$ sudo hostnamectl set-hostname k8s-master
 ```
+
+# 1.1 hosts 등록
+```bash
+# hosts 내 등록 상태 확인
+$ cat /etc/hosts
+
+[master@k8s-master ~]$ cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+```
+```bash
+# hosts 내 k8s-master 추가
+$ sudo sed -i '2a\{본인 Master Node 구축 서버 IP} k8s-master' /etc/hosts
+
+# 확인
+$ cat /etc/hosts
+[master@k8s-master ~]$ cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+xxx.xxx.xxx.xxx k8s-master
+```
+
+
 
 ## 1.2 SELinuxm, Firewalld, Swap 비활성화
 <li>목적 : 쿠버네티스는 SELinux, Firewalld, Swap 이 활성화 되어있으면 정상 동작 하지 않을 수 있습니다.</li>
@@ -78,8 +101,57 @@ $ sudo sed -i 's/^SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
 $ sudo swapoff -a
 $ sudo sed -i '/swap/d' /etc/fstab
 
-$ sudo systemctl disable --now firewalld
+$ sudo systemctl stop firewalld && sudo systemctl disable firewalld && sudo systemctl status firewalld
+
+## 결과
+Removed /etc/systemd/system/multi-user.target.wants/firewalld.service.
+Removed /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
+● firewalld.service - firewalld - dynamic firewall daemon
+   Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)
+   Active: inactive (dead)
+     Docs: man:firewalld(1)
+
+ 5월 19 02:15:27 k8s-master systemd[1]: Starting firewalld - dynamic firewall daemon...
+ 5월 19 02:15:28 k8s-master systemd[1]: Started firewalld - dynamic firewall daemon.
+ 5월 19 02:15:28 k8s-master firewalld[721]: WARNING: AllowZoneDrifting is enabled. This is considered an insecure configuration option. It will be removed in a future release. Please consider disabling it now.
+ 5월 19 03:38:50 k8s-master systemd[1]: Stopping firewalld - dynamic firewall daemon...
+ 5월 19 03:38:51 k8s-master systemd[1]: firewalld.service: Succeeded.
+ 5월 19 03:38:51 k8s-master systemd[1]: Stopped firewalld - dynamic firewall daemon.
 ```
+
+# 1.3 IP 포워딩 등 커널 파라미터 설정
+**IPv4 포워딩 활성화**
+```bash
+$ cat << EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+
+# 커널 모듈 로드
+sudo modprobe overlay
+sudo modprobe br_netfilter
+```
+
+**시스템 설정**
+```bash
+$ cat << EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables  = 1
+net.ipv4.ip_forward                 = 1
+EOF
+
+# 적용
+sudo sysctl --system
+
+# 결과
+* Applying /etc/sysctl.d/k8s.conf ...
+net.bridge.bridge-nf-call-iptables = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.ipv4.ip_forward = 1
+
+이렇게 출력되면 정상 !
+```
+
 
 
 ## :dizzy: 1.3 :fire: IP 포워딩 및 브릿지 설정
