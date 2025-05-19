@@ -38,14 +38,8 @@ toc_sticky : true
   opacity: 1;
 }
 </style>
-<!---->
-
-# 컨테이너 런타임이란?
-컨테이너 실행을 담당하는 소프트웨어
-
-## 필수 요소 설치 및 구성
-
-### :fire: 1. IPv4를 포워딩하여 iptables가 브리지된 트래픽 보게 하기
+<!--
+사용 예시
 
 <span class="tooltip"><u>lsmod</u>
   <span class="tooltiptext">리눅스 커널에 있는 모듈(module)들의 정보를 보여주는 명령어.</span>
@@ -55,25 +49,56 @@ toc_sticky : true
   <span class="tooltiptext">리눅스 커널의 네트워크 필터링 모듈로, 브리지된 네트워크 트래픽을 처리하는 데 사용됩니다</span>
 </span>
 모듈이 로드 되어있는 지 확인한다.
+
+
+-->
+
+# 컨테이너 런타임이란?
+컨테이너 실행을 담당하는 소프트웨어
+
+# 1. 사전 준비
+## :star2: 1.1 OS 업데이트 및 필수 설정
+※ Cloud 환경에서는 Kernel Update 를 권장하지 않으므로 Cloud 환경에서는 해당 항목 무시
+<li>목적 : 최신 보안 패치 적용, 네트워크/리소스 문제 예방</li>
 <br>
-```bash
-$ [root@master master]# lsmod | grep br_netfilter
-$ [root@master master]# 
-```
-:arrow_up_small: br_netfilter 모듈이 로드되어 있지 않을 때
-
-br_netfilter 를 로드하기 위해 `sudo modprobe br_netfilter` 를 실행하여 줍니다.
 
 ```bash
-$ [root@master master]# modprobe br_netfilter
-$ [root@master master]# lsmod | grep br_netfilter
-br_netfilter           28672  0
-bridge                294912  1 br_netfilter
+$ sudo dnf update -y
+$ sudo hostname set-hostname k8s-master
 ```
-:arrow_up_small: br_netfilter 모듈이 로드된 것을 확인하실 수 있습니다.
+
+## 1.2 SELinuxm, Firewalld, Swap 비활성화
+<li>목적 : 쿠버네티스는 SELinux, Firewalld, Swap 이 활성화 되어있으면 정상 동작 하지 않을 수 있습니다.</li>
+<br>
+
+```bash
+$ sudo setenforce 0
+$ sudo sed -i 's/^SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
+
+$ sudo swapoff -a
+$ sudo sed -i '/swap/d' /etc/fstab
+
+$ sudo systemctl disable --now firewalld
+```
 
 
-리눅스 노드의 iptables 가 브리지된 트래픽을 올바르게 보기 위한 요구사항으로, `sysctl` 구성에서 `net.bridge.bridge-nf-call-iptables`가 1로 설정되어있는지 확인 하여 줍니다.
+## :dizzy: 1.3 :fire: IP 포워딩 및 브릿지 설정
+<li>목적 : Pod 네트워크 통신을 위해 커널 파라미터 조정</li>
+<br>
+
+```bash
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+EOF
+
+sudo modprobe br_netfilter
+sudo sysctl --system
+```
+
+# 2. 컨테이너 런타임 (containerd) 설치
+## 2.1 
 ```bash
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
