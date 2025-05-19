@@ -33,7 +33,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Rocky_Linux" %}
-                        <li><a href="/categories/Rocky Linux" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Rocky Linux ({{category[1].size}})</a></style></li>
+                        <li><a href="/categories/RockyLinux" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Rocky Linux ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
             </ul>
