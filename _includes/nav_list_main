@@ -32,7 +32,7 @@
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Rocky Linux" %}
+                    {% if category[0] == "Rocky_Linux" %}
                         <li><a href="/categories/Rocky Linux" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Rocky Linux ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
