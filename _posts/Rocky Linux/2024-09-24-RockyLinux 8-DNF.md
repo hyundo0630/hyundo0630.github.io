@@ -1,7 +1,7 @@
 ---
 title : "[RockyLinux 8] DNF 란?"
 categories :
-    - Rocky Linux
+    - Rocky_Linux
 tags :
     - OS
     - Command

@@ -1,7 +1,7 @@
 ---
 title : "[RockyLinux 8] repository 별 역할"
 categories :
-    - Rocky Linux
+    - Rocky_Linux
 tags :
     - Repository
 

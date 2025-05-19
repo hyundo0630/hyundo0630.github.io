@@ -1,7 +1,7 @@
 ---
 title : "[RockyLinux 8] Kernel 업데이트"
 categories :
-    - Rocky Linux
+    - Rocky_Linux
 tags :
     - Kernel
     - Version

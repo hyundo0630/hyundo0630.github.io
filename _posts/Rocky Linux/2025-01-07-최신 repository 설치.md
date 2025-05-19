@@ -1,7 +1,7 @@
 ---
 title : "[RockyLinux 8] 최신 repository (codeit) 설치"
 categories :
-    - Rocky Linux
+    - Rocky_Linux
 tags :
     - Repository
 
