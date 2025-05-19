@@ -1,9 +1,9 @@
 ---
 title : "[RockyLinux 8] repository 별 역할"
 categories :
-    - repository
-tags :
     - Rocky Linux
+tags :
+    - Repository
 
 toc : true
 toc_sticky : true
