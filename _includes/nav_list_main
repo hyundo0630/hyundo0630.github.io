@@ -171,6 +171,13 @@
         <!--span 태그로 카테고리들을 크게 분류 -->
         <span class="nav__sub-title" style="font-family:'KCC-Ganpan';font-size:16px;color:#212f53;"> Cursor </style></span>
         <!--ul 태그로 같은 카테고리들 Connect지들 나열-->
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Cursor" %}
+                        <li><a href="/categories/Cursor" class="" style="font-family:'KCC-Ganpan';font-size:14px;"> Cursor ({{category[1].size}})</a></style></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
       </li>
   </ul>
 </nav>
